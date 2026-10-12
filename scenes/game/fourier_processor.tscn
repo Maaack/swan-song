@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://ccetdtw0rsj18"]
+
+[ext_resource type="Script" uid="uid://b0agq5arshv4j" path="res://scenes/game/fourier_processor.gd" id="1_gx5xm"]
+[ext_resource type="Script" uid="uid://2vp2njihlfek" path="res://resources/dataset/homer_drawing.gd" id="2_s8d2m"]
+[ext_resource type="Script" uid="uid://dmhlhegovgg3q" path="res://scenes/game/fourier_cycles.gd" id="3_s8d2m"]
+[ext_resource type="Script" uid="uid://c7o8uqqpfkbxh" path="res://scenes/game/drawing.gd" id="4_qgcl8"]
+
+[node name="FourierProcessor" type="Node" unique_id=1806787966]
+script = ExtResource("1_gx5xm")
+terms = 5
+scale = 20.0
+
+[node name="Dataset" type="Node" parent="." unique_id=336046175]
+unique_name_in_owner = true
+script = ExtResource("2_s8d2m")
+
+[node name="FourierCycles" type="Node2D" parent="." unique_id=768182382]
+unique_name_in_owner = true
+position = Vector2(402, 199)
+script = ExtResource("3_s8d2m")
+time = -3.14159265358979
+terms = 773
+
+[node name="Drawing" type="Node2D" parent="FourierCycles" unique_id=1586257912]
+unique_name_in_owner = true
+script = ExtResource("4_qgcl8")
