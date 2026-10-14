@@ -1,11 +1,11 @@
 class_name FourierTransform
 extends Node
 
-static func dft(input_array: Array) -> Array[SpectrumData]:
+static func odd_dft(input_array: Array) -> Array[SpectrumData]:
 	var data_array : Array[SpectrumData] = []
-	var size : int = input_array.size()
+	var size : float = input_array.size()
 	var start_time = Time.get_unix_time_from_system()
-	data_array.resize(size)
+	data_array.resize(int(size))
 	@warning_ignore("integer_division")
 	for k in range(-(size - 1) / 2, ((size - 1) / 2) + 1):
 		if (Time.get_unix_time_from_system() - start_time > 100):
@@ -17,11 +17,11 @@ static func dft(input_array: Array) -> Array[SpectrumData]:
 			if (Time.get_unix_time_from_system() - start_time_2 > 100):
 				push_warning("breaking out 2")
 				break
-			var phi = k * 2 * PI * l / float(size)
+			var phi = k * 2 * PI * l / size
 			var c = Complex.new(cos(phi), -sin(phi))
 			sum.add(input_array[l].mult(c))
-		sum.re = sum.re / float(size)
-		sum.im = sum.im / float(size)
+		sum.re = sum.re / size
+		sum.im = sum.im / size
 		var freq = k
 		var amp = sqrt(sum.re * sum.re + sum.im * sum.im)
 		var phase = atan2(sum.im, sum.re)

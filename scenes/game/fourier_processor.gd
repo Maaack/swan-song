@@ -21,7 +21,7 @@ func _ready():
 	for i in range(0, drawing.size(), skip):
 		var c = Complex.new(scale * (drawing[i].x + x_offset), -scale * (drawing[i].y + y_offset))
 		x.append(c)
-	fourierX = FourierTransform.dft(x);
+	fourierX = FourierTransform.odd_dft(x);
 	fourierX.sort_custom(func(a, b) : return a.amp > b.amp )
 
 	fourier_cycles.data = fourierX
