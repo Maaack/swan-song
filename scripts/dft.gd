@@ -3,7 +3,8 @@ extends Node
 
 static func dft(data: Array) -> Array[SpectrumData]:
 	var size := float(data.size())
-	var frequencies = [];
+	var frequencies : Array[SpectrumData] = []
+	frequencies.resize(int(size))
 
 	for freq in range (0, size):
 		var re : float = 0
