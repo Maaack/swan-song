@@ -24,6 +24,14 @@ func parse_cycle_series(input:String) -> Array:
 		index += 1
 	return parsed_cycles
 
+func _draw_graphs():
+	time_graph.queue_redraw()
+	cycle_graph.queue_redraw()
+
+func _draw_cycle_series(cycle_series:Array[SpectrumData]):
+	time_graph.cycle_series = cycle_series
+	cycle_graph.cycle_series = cycle_series
+
 func _on_time_series_input_text_submitted(new_text:String):
 	var time_series = parse_time_series(new_text)
 	var cycle_series = FourierTransform.dft(time_series)
@@ -39,17 +47,7 @@ func _on_cycle_series_input_text_submitted(new_text):
 func _on_total_check_box_toggled(toggled_on):
 	time_graph.show_combined = toggled_on
 	cycle_graph.show_combined = toggled_on
-	time_graph.queue_redraw()
-	cycle_graph.queue_redraw()
 
 func _on_parts_check_box_toggled(toggled_on):
 	time_graph.show_parts = toggled_on
 	cycle_graph.show_combined = toggled_on
-	time_graph.queue_redraw()
-	cycle_graph.queue_redraw()
-
-func _draw_cycle_series(cycle_series:Array[SpectrumData]):
-	time_graph.cycle_series = cycle_series
-	time_graph.queue_redraw()
-	cycle_graph.cycle_series = cycle_series
-	cycle_graph.queue_redraw()
