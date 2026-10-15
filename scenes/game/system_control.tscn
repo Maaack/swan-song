@@ -23,7 +23,22 @@ grow_vertical = 2
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=448409672]
 layout_mode = 2
 
-[node name="TimeSeriesInput" type="LineEdit" parent="VBoxContainer/HBoxContainer" unique_id=2036845063]
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=1216247043]
+layout_mode = 2
+text = "Cycles"
+
+[node name="CycleSeriesInput" type="LineEdit" parent="VBoxContainer/HBoxContainer" unique_id=2036845063]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+placeholder_text = "0 1 2 3"
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=862835281]
+layout_mode = 2
+text = "Times"
+
+[node name="TimeSeriesInput" type="LineEdit" parent="VBoxContainer/HBoxContainer" unique_id=379239683]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(240, 0)
 layout_mode = 2
 placeholder_text = "0 1 2 3"
@@ -56,6 +71,7 @@ layout_mode = 2
 unique_name_in_owner = true
 script = ExtResource("1_gj15m")
 
+[connection signal="text_submitted" from="VBoxContainer/HBoxContainer/CycleSeriesInput" to="." method="_on_cycle_series_input_text_submitted"]
 [connection signal="text_submitted" from="VBoxContainer/HBoxContainer/TimeSeriesInput" to="." method="_on_time_series_input_text_submitted"]
 [connection signal="toggled" from="VBoxContainer/HBoxContainer/TotalCheckBox" to="." method="_on_total_check_box_toggled"]
 [connection signal="toggled" from="VBoxContainer/HBoxContainer/PartsCheckBox" to="." method="_on_parts_check_box_toggled"]

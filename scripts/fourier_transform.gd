@@ -5,11 +5,9 @@ static func dft(data: Array) -> Array[SpectrumData]:
 	var size := float(data.size())
 	var frequencies : Array[SpectrumData] = []
 	frequencies.resize(int(size))
-
 	for freq in range (0, size):
 		var re : float = 0
 		var im : float = 0
-
 		for t in range(0, size):
 			var rate = -1 * (2 * PI) * freq
 			var time = t / size
@@ -18,7 +16,6 @@ static func dft(data: Array) -> Array[SpectrumData]:
 			var im_part = data[t] * sin(distance)
 			re += re_part
 			im += im_part
-
 		if (abs(re) < 1e-10): re = 0
 		if (abs(im) < 1e-10): im = 0
 		re = re / size
@@ -27,7 +24,6 @@ static func dft(data: Array) -> Array[SpectrumData]:
 		var phase = atan2(im, re) * 180 / PI
 		var value = SpectrumData.new(re, im, freq, amp, phase)
 		frequencies[freq] = value
-
 	return frequencies
 
 static func idft(cycles : Array) -> Array:
@@ -36,7 +32,7 @@ static func idft(cycles : Array) -> Array:
 	for i in range(0, int(size)):
 		var pos = i / size * 2 * PI
 		var total = total_value(pos, cycles)
-		timeseries.append(total)
+		timeseries.append(total.re)
 	return timeseries
 
 static func odd_dft(input_array: Array) -> Array[SpectrumData]:
