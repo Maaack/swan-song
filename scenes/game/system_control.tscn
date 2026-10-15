@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://b2b8j71xs8jsj"]
 
 [ext_resource type="Script" uid="uid://bh3rkqdqx2mtt" path="res://scenes/game/system_control.gd" id="1_0yilq"]
-[ext_resource type="Script" uid="uid://dttojb1d7b5hs" path="res://scenes/game/graph.gd" id="1_gj15m"]
+[ext_resource type="Script" uid="uid://dttojb1d7b5hs" path="res://scenes/game/line_graph.gd" id="1_gj15m"]
+[ext_resource type="Script" uid="uid://hfjqg1fnsn16" path="res://scenes/game/cycle_graph.gd" id="3_0yilq"]
 
 [node name="SystemControl" type="Control" unique_id=2125891572]
 layout_mode = 3
@@ -12,66 +13,91 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0yilq")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=848028485]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1909090491]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=448409672]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=848028485]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=1216247043]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=448409672]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1216247043]
 layout_mode = 2
 text = "Cycles"
 
-[node name="CycleSeriesInput" type="LineEdit" parent="VBoxContainer/HBoxContainer" unique_id=2036845063]
+[node name="CycleSeriesInput" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=2036845063]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(240, 0)
 layout_mode = 2
 placeholder_text = "0 1 2 3"
 
-[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=862835281]
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=862835281]
 layout_mode = 2
 text = "Times"
 
-[node name="TimeSeriesInput" type="LineEdit" parent="VBoxContainer/HBoxContainer" unique_id=379239683]
+[node name="TimeSeriesInput" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=379239683]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(240, 0)
 layout_mode = 2
 placeholder_text = "0 1 2 3"
 
-[node name="TotalCheckBox" type="CheckBox" parent="VBoxContainer/HBoxContainer" unique_id=883417608]
+[node name="TotalCheckBox" type="CheckBox" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=883417608]
 unique_name_in_owner = true
 layout_mode = 2
 button_pressed = true
 text = "Total"
 
-[node name="PartsCheckBox" type="CheckBox" parent="VBoxContainer/HBoxContainer" unique_id=799029181]
+[node name="PartsCheckBox" type="CheckBox" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=799029181]
 unique_name_in_owner = true
 layout_mode = 2
 button_pressed = true
 text = "Parts"
 
-[node name="TicksCheckBox" type="CheckBox" parent="VBoxContainer/HBoxContainer" unique_id=2039714318]
+[node name="TicksCheckBox" type="CheckBox" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=2039714318]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 text = "Ticks"
 
-[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer" unique_id=786491123]
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1007901136]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Control" type="Control" parent="VBoxContainer/CenterContainer" unique_id=935870775]
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=788248473]
+custom_minimum_size = Vector2(240, 0)
 layout_mode = 2
 
-[node name="Graph" type="Node2D" parent="VBoxContainer/CenterContainer/Control" unique_id=1730672432]
+[node name="CycleGraphControl" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer2/CenterContainer" unique_id=935870775]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CycleGraph" type="Node2D" parent="MarginContainer/VBoxContainer/HBoxContainer2/CenterContainer/CycleGraphControl" unique_id=493391469]
+unique_name_in_owner = true
+script = ExtResource("3_0yilq")
+
+[node name="CenterContainer2" type="CenterContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=757367572]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TimeGraphControl" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer2/CenterContainer2" unique_id=78371938]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TimeGraph" type="Node2D" parent="MarginContainer/VBoxContainer/HBoxContainer2/CenterContainer2/TimeGraphControl" unique_id=1730672432]
 unique_name_in_owner = true
 script = ExtResource("1_gj15m")
 
-[connection signal="text_submitted" from="VBoxContainer/HBoxContainer/CycleSeriesInput" to="." method="_on_cycle_series_input_text_submitted"]
-[connection signal="text_submitted" from="VBoxContainer/HBoxContainer/TimeSeriesInput" to="." method="_on_time_series_input_text_submitted"]
-[connection signal="toggled" from="VBoxContainer/HBoxContainer/TotalCheckBox" to="." method="_on_total_check_box_toggled"]
-[connection signal="toggled" from="VBoxContainer/HBoxContainer/PartsCheckBox" to="." method="_on_parts_check_box_toggled"]
+[connection signal="text_submitted" from="MarginContainer/VBoxContainer/HBoxContainer/CycleSeriesInput" to="." method="_on_cycle_series_input_text_submitted"]
+[connection signal="text_submitted" from="MarginContainer/VBoxContainer/HBoxContainer/TimeSeriesInput" to="." method="_on_time_series_input_text_submitted"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/HBoxContainer/TotalCheckBox" to="." method="_on_total_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/HBoxContainer/PartsCheckBox" to="." method="_on_parts_check_box_toggled"]

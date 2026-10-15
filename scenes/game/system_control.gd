@@ -1,7 +1,8 @@
 extends Control
 
 @export var graph_scale:float = 1.0
-@onready var graph = %Graph
+@onready var time_graph = %TimeGraph
+@onready var cycle_graph = %CycleGraph
 @onready var cycle_series_input = %CycleSeriesInput
 @onready var time_series_input = %TimeSeriesInput
 
@@ -26,21 +27,29 @@ func parse_cycle_series(input:String) -> Array:
 func _on_time_series_input_text_submitted(new_text:String):
 	var time_series = parse_time_series(new_text)
 	var cycle_series = FourierTransform.dft(time_series)
-	graph.cycle_series = cycle_series
-	graph.queue_redraw()
+	_draw_cycle_series(cycle_series)
 
 func _on_cycle_series_input_text_submitted(new_text):
 	var parsed_cycles = parse_cycle_series(new_text)
 	var time_series = FourierTransform.idft(parsed_cycles)
 	time_series_input.text = " ".join(time_series)
 	var cycle_series = FourierTransform.dft(time_series)
-	graph.cycle_series = cycle_series
-	graph.queue_redraw()
+	_draw_cycle_series(cycle_series)
 
 func _on_total_check_box_toggled(toggled_on):
-	graph.show_combined = toggled_on
-	graph.queue_redraw()
+	time_graph.show_combined = toggled_on
+	cycle_graph.show_combined = toggled_on
+	time_graph.queue_redraw()
+	cycle_graph.queue_redraw()
 
 func _on_parts_check_box_toggled(toggled_on):
-	graph.show_parts = toggled_on
-	graph.queue_redraw()
+	time_graph.show_parts = toggled_on
+	cycle_graph.show_combined = toggled_on
+	time_graph.queue_redraw()
+	cycle_graph.queue_redraw()
+
+func _draw_cycle_series(cycle_series:Array[SpectrumData]):
+	time_graph.cycle_series = cycle_series
+	time_graph.queue_redraw()
+	cycle_graph.cycle_series = cycle_series
+	cycle_graph.queue_redraw()
