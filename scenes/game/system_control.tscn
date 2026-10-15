@@ -1,9 +1,61 @@
 [gd_scene format=3 uid="uid://b2b8j71xs8jsj"]
 
-[node name="Control" type="Control" unique_id=2125891572]
+[ext_resource type="Script" uid="uid://bh3rkqdqx2mtt" path="res://scenes/game/system_control.gd" id="1_0yilq"]
+[ext_resource type="Script" uid="uid://dttojb1d7b5hs" path="res://scenes/game/graph.gd" id="1_gj15m"]
+
+[node name="SystemControl" type="Control" unique_id=2125891572]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_0yilq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=848028485]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=448409672]
+layout_mode = 2
+
+[node name="TimeSeriesInput" type="LineEdit" parent="VBoxContainer/HBoxContainer" unique_id=2036845063]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+placeholder_text = "0 1 2 3"
+
+[node name="TotalCheckBox" type="CheckBox" parent="VBoxContainer/HBoxContainer" unique_id=883417608]
+unique_name_in_owner = true
+layout_mode = 2
+button_pressed = true
+text = "Total"
+
+[node name="PartsCheckBox" type="CheckBox" parent="VBoxContainer/HBoxContainer" unique_id=799029181]
+unique_name_in_owner = true
+layout_mode = 2
+button_pressed = true
+text = "Parts"
+
+[node name="TicksCheckBox" type="CheckBox" parent="VBoxContainer/HBoxContainer" unique_id=2039714318]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Ticks"
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer" unique_id=786491123]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="VBoxContainer/CenterContainer" unique_id=935870775]
+layout_mode = 2
+
+[node name="Graph" type="Node2D" parent="VBoxContainer/CenterContainer/Control" unique_id=1730672432]
+unique_name_in_owner = true
+script = ExtResource("1_gj15m")
+
+[connection signal="text_submitted" from="VBoxContainer/HBoxContainer/TimeSeriesInput" to="." method="_on_time_series_input_text_submitted"]
+[connection signal="toggled" from="VBoxContainer/HBoxContainer/TotalCheckBox" to="." method="_on_total_check_box_toggled"]
+[connection signal="toggled" from="VBoxContainer/HBoxContainer/PartsCheckBox" to="." method="_on_parts_check_box_toggled"]

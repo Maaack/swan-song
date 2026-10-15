@@ -35,7 +35,7 @@ static func idft(cycles : Array) -> Array:
 	var size := float(cycles.size())
 	for i in range(0, int(size)):
 		var pos = i / size * 2 * PI
-		var total = totalValue(pos, cycles)
+		var total = total_value(pos, cycles)
 		timeseries.append(total)
 	return timeseries
 
@@ -61,9 +61,7 @@ static func odd_dft(input_array: Array) -> Array[SpectrumData]:
 		data_array[data_key] = value
 	return data_array
 
-static func totalValue(x : float, cycles : Array):
-	cycles = cycles if cycles is Array else [cycles]
-
+static func total_value(x : float, cycles : Array):
 	var re : float = 0
 	var im : float = 0
 

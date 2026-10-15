@@ -1,3 +1,6 @@
 [gd_scene format=3 uid="uid://7070p1urbggd"]
 
+[ext_resource type="Script" uid="uid://dyie5t871wvq8" path="res://scenes/game/fourier_transformer.gd" id="1_0jn73"]
+
 [node name="FourierTransformer" type="Node" unique_id=1676963940]
+script = ExtResource("1_0jn73")
