@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dcg8yqog21mnt" path="res://scenes/game/title_screen.gd" id="1_lehe1"]
 [ext_resource type="Shader" uid="uid://djtbs11vmntm8" path="res://scenes/game/title_screen_static.gdshader" id="2_3t1qn"]
 [ext_resource type="Shader" uid="uid://cqgvvug0oygwp" path="res://scenes/game/chromatic.gdshader" id="2_v1bup"]
-[ext_resource type="Shader" uid="uid://q6ui2j35j0lc" path="res://scenes/game/tv_off.gdshader" id="3_idahx"]
+[ext_resource type="Shader" uid="uid://ckhhelq7qd6yh" path="res://scenes/game/tv_shutdown.gdshader" id="5_lehe1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1cqto"]
 shader = ExtResource("2_v1bup")
@@ -18,15 +18,18 @@ shader_parameter/stretch = Vector2(0.75, 1.5)
 shader_parameter/radius = 0.0
 shader_parameter/brightness = 0.6999999843536
 shader_parameter/density = 0.0999999977648
-shader_parameter/opacity = 0.2999999932944
+shader_parameter/opacity = 0.3499999921768
 shader_parameter/static_color = Color(1, 1, 1, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_idahx"]
-shader = ExtResource("3_idahx")
+shader = ExtResource("5_lehe1")
 shader_parameter/speed = 1.0
 shader_parameter/progress = 0.0
 shader_parameter/smoothness = 0.1
 shader_parameter/flash_radius = 0.15
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/off_color = Color(0, 0, 0, 1)
+shader_parameter/monitor_filter = false
 
 [sub_resource type="Animation" id="Animation_idahx"]
 length = 0.001
@@ -54,11 +57,23 @@ tracks/1/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TVOffColorRect:material:shader_parameter/progress")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_v1bup"]
 resource_name = "opening"
-length = 6.0
-step = 0.0333333
+length = 8.0
+step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -66,7 +81,7 @@ tracks/0/path = NodePath("CenterContainer/Label:offset_transform_scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat64Array(0, 6),
+"times": PackedFloat64Array(0, 8),
 "transitions": PackedFloat64Array(1, 1),
 "update": 0,
 "values": [Vector2(0.75, 0.75), Vector2(1, 1)]
@@ -78,10 +93,22 @@ tracks/1/path = NodePath("StaticColorRect:material:shader_parameter/radius")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat64Array(0, 6),
+"times": PackedFloat64Array(0, 8),
 "transitions": PackedFloat64Array(1, 1),
 "update": 0,
 "values": [0.2999999932944, 0.5999999865888]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TVOffColorRect:material:shader_parameter/progress")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat64Array(7.6, 8),
+"transitions": PackedFloat64Array(1, 1),
+"update": 0,
+"values": [0.0, 0.999999977648]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lehe1"]
@@ -98,6 +125,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lehe1")
+next_scene_path = "res://scenes/game/presentation.tscn"
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=2097354515]
 layout_mode = 1
@@ -113,7 +141,7 @@ offset_transform_enabled = true
 offset_transform_scale = Vector2(0.25, 0.25)
 theme_override_colors/font_color = Color(1, 1, 1, 0.9372549)
 theme_override_fonts/font = ExtResource("1_amlxd")
-theme_override_font_sizes/font_size = 128
+theme_override_font_sizes/font_size = 160
 text = "SWAN SONG"
 horizontal_alignment = 1
 
@@ -138,7 +166,6 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0)
 
 [node name="TVOffColorRect" type="ColorRect" parent="." unique_id=196496497]
-visible = false
 material = SubResource("ShaderMaterial_idahx")
 layout_mode = 1
 anchors_preset = 15
@@ -146,7 +173,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=689677881]
 libraries/ = SubResource("AnimationLibrary_lehe1")

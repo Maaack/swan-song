@@ -3,11 +3,12 @@ extends Control
 ## If Maaack's Scene Loader is installed, then it will be used to change scenes.
 @onready var scene_loader_node = get_tree().root.get_node_or_null(^"SceneLoader")
 
+@export_file_path("*.tscn") var next_scene_path : String
 ## Requires Maaack's Scene Loader.
 @export var show_loading_screen : bool = false
 
 func get_next_scene_path() -> String:
-	return MaaacksGameTemplate.get_game_path()
+	return next_scene_path
 
 func _on_scene_loaded() -> void:
 	scene_loader_node.change_scene_to_resource()
