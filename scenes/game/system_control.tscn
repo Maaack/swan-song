@@ -97,7 +97,53 @@ size_flags_horizontal = 3
 unique_name_in_owner = true
 script = ExtResource("1_gj15m")
 
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=613284771]
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1219559823]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=505781239]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Signal Parts:"
+
+[node name="SignalSplits" type="SpinBox" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=847927450]
+unique_name_in_owner = true
+layout_mode = 2
+min_value = 1.0
+max_value = 64.0
+value = 1.0
+alignment = 1
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1655753641]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1183597798]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Signal Data"
+
+[node name="ResultText" type="TextEdit" parent="MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1475653969]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(480, 32)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+placeholder_text = "          "
+editable = false
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=441724613]
+layout_mode = 2
+alignment = 2
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1793539251]
+layout_mode = 2
+text = "Continue"
+
 [connection signal="text_submitted" from="MarginContainer/VBoxContainer/HBoxContainer/CycleSeriesInput" to="." method="_on_cycle_series_input_text_submitted"]
 [connection signal="text_submitted" from="MarginContainer/VBoxContainer/HBoxContainer/TimeSeriesInput" to="." method="_on_time_series_input_text_submitted"]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/HBoxContainer/TotalCheckBox" to="." method="_on_total_check_box_toggled"]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/HBoxContainer/PartsCheckBox" to="." method="_on_parts_check_box_toggled"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/HBoxContainer3/SignalSplits" to="." method="_on_signal_splits_value_changed"]

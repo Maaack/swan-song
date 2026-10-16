@@ -62,9 +62,9 @@ static func total_value(x : float, cycles : Array):
 	var im : float = 0
 
 	for cycle in cycles:
-		re += cycle.amp * cos(x * cycle.freq + cycle.phase * PI/180)
-		im += cycle.amp * sin(x * cycle.freq + cycle.phase * PI/180)
+		re += cycle.amp * cos(x * cycle.freq + cycle.phase * PI/180.0)
+		im += cycle.amp * sin(x * cycle.freq + cycle.phase * PI/180.0)
 
 	var amp = sqrt(re * re + im * im)
-	var phase = atan2(im, re) * 180 / PI
+	var phase = atan2(im, re) * 180.0 / PI
 	return SpectrumData.new(re, im, 0, amp, phase)

@@ -5,6 +5,8 @@ extends Control
 @onready var cycle_graph = %CycleGraph
 @onready var cycle_series_input = %CycleSeriesInput
 @onready var time_series_input = %TimeSeriesInput
+@onready var signal_splits = %SignalSplits
+@onready var result_text = %ResultText
 
 func parse_time_series(input:String) -> PackedFloat64Array:
 	return input.split_floats(" ", false)
@@ -51,3 +53,12 @@ func _on_total_check_box_toggled(toggled_on):
 func _on_parts_check_box_toggled(toggled_on):
 	time_graph.show_parts = toggled_on
 	cycle_graph.show_combined = toggled_on
+
+func _on_signal_splits_value_changed(value):
+	var cycle_series = time_graph.cycle_series
+	var cycle_series_size = cycle_series.size()
+	var text = ""
+	for i in range(0, value):
+		var x = 2 * PI * i / float(value)
+		text += "%0.1f  " % FourierTransform.total_value(x, cycle_series).amp
+	result_text.text = text
