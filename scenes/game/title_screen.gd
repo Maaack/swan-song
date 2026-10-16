@@ -1,5 +1,7 @@
 extends Control
 
+signal level_won
+
 ## If Maaack's Scene Loader is installed, then it will be used to change scenes.
 @onready var scene_loader_node = get_tree().root.get_node_or_null(^"SceneLoader")
 
@@ -14,6 +16,7 @@ func _on_scene_loaded() -> void:
 	scene_loader_node.change_scene_to_resource()
 
 func _load_next_scene() -> void:
+	level_won.emit()
 	if scene_loader_node:
 		var status = scene_loader_node.get_status()
 		if status == ResourceLoader.THREAD_LOAD_LOADED:

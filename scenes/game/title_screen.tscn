@@ -9,7 +9,7 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1cqto"]
 shader = ExtResource("2_v1bup")
 shader_parameter/r_displacement = Vector2(3, 0)
-shader_parameter/g_displacement = Vector2(0, 0)
+shader_parameter/g_displacement = Vector2(0, 3)
 shader_parameter/b_displacement = Vector2(-3, 0)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0gu67"]
@@ -69,6 +69,42 @@ tracks/2/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ChromaticColorRect:material:shader_parameter/r_displacement")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 0,
+"values": [Vector2(3, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ChromaticColorRect:material:shader_parameter/g_displacement")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 0,
+"values": [Vector2(0, 3)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ChromaticColorRect:material:shader_parameter/b_displacement")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 0,
+"values": [Vector2(-3, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_v1bup"]
 resource_name = "opening"
@@ -109,6 +145,42 @@ tracks/2/keys = {
 "transitions": PackedFloat64Array(1, 1),
 "update": 0,
 "values": [0.0, 0.999999977648]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ChromaticColorRect:material:shader_parameter/r_displacement")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat64Array(5, 7),
+"transitions": PackedFloat64Array(1, 1),
+"update": 0,
+"values": [Vector2(3, 0), Vector2(9, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ChromaticColorRect:material:shader_parameter/g_displacement")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat64Array(5, 7),
+"transitions": PackedFloat64Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 3), Vector2(0, 9)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ChromaticColorRect:material:shader_parameter/b_displacement")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat64Array(5, 7),
+"transitions": PackedFloat64Array(1, 1),
+"update": 0,
+"values": [Vector2(-3, 0), Vector2(-9, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lehe1"]
