@@ -197,7 +197,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lehe1")
-next_scene_path = "res://scenes/game/presentation.tscn"
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=2097354515]
 layout_mode = 1
