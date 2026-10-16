@@ -1,0 +1,705 @@
+[gd_scene format=3 uid="uid://dwk6f3u7qdyf1"]
+
+[ext_resource type="Texture2D" uid="uid://c7fq3xy8ho6fh" path="res://assets/icons/earth-africa-europe.png" id="1_ii0do"]
+[ext_resource type="Texture2D" uid="uid://di18mf13dw7i3" path="res://assets/icons/ion-cannon-blast.png" id="2_11pcq"]
+[ext_resource type="Texture2D" uid="uid://747rvnibglbo" path="res://assets/icons/galaxy.png" id="3_c7iy7"]
+[ext_resource type="Texture2D" uid="uid://db4xlj6l4wlny" path="res://assets/icons/radar-dish.png" id="4_xynpv"]
+[ext_resource type="Texture2D" uid="uid://dyvy3es6dlv31" path="res://assets/icons/amplitude.png" id="5_hd6si"]
+[ext_resource type="Texture2D" uid="uid://cwd8qvre87an1" path="res://assets/icons/distress-signal.png" id="6_bdclc"]
+[ext_resource type="Texture2D" uid="uid://5v6qyc61y7lb" path="res://assets/icons/dozen.png" id="7_c7uss"]
+[ext_resource type="Texture2D" uid="uid://bxj4nh0vwkvae" path="res://assets/icons/family-tree.png" id="8_x36u0"]
+[ext_resource type="Texture2D" uid="uid://drwf1krik88kr" path="res://assets/icons/teacher.png" id="9_tolrj"]
+[ext_resource type="Texture2D" uid="uid://dl41trqw4l4be" path="res://assets/icons/team-downgrade.png" id="10_6rc56"]
+
+[sub_resource type="Animation" id="Animation_x36u0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/StoryContainer:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer/StoryContainer2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MarginContainer/StoryContainer3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MarginContainer/StoryContainer/TextureRect:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 1,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MarginContainer/StoryContainer/TextureRect2:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 1,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MarginContainer/StoryContainer/TextureRect3:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 1,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("MarginContainer/StoryContainer2/TextureRect:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 1,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("MarginContainer/StoryContainer2/TextureRect2:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 1,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("MarginContainer/StoryContainer2/TextureRect3:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 1,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("MarginContainer/StoryContainer3/GridContainer/TextureRect:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 1,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("MarginContainer/StoryContainer3/GridContainer/TextureRect2:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 1,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("MarginContainer/StoryContainer3/GridContainer/TextureRect3:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 1,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("MarginContainer/StoryContainer3/GridContainer/TextureRect4:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 1,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("MarginContainer/StoryContainer3/GridContainer/TextureRect5:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 1,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("MarginContainer/StoryContainer3/GridContainer/TextureRect6:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 1,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("MarginContainer/StoryContainer3/GridContainer/TextureRect7:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 1,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("MarginContainer/StoryContainer3/GridContainer/TextureRect8:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 1,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("MarginContainer/StoryContainer3/GridContainer/TextureRect9:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 1,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("MarginContainer/StoryContainer3/TextureRect2:modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 1,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("MarginContainer/StoryContainer3/VBoxContainer/TextureRect4:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 1,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("MarginContainer/StoryContainer3/VBoxContainer/TextureRect3:modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 1,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_c7uss"]
+resource_name = "opening"
+length = 20.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/StoryContainer:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat64Array(0, 4),
+"transitions": PackedFloat64Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer/StoryContainer2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat64Array(0, 4, 10.5),
+"transitions": PackedFloat64Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MarginContainer/StoryContainer3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat64Array(0, 10.5),
+"transitions": PackedFloat64Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MarginContainer/StoryContainer/TextureRect:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat64Array(0, 0.5),
+"transitions": PackedFloat64Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MarginContainer/StoryContainer/TextureRect2:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat64Array(0, 2),
+"transitions": PackedFloat64Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MarginContainer/StoryContainer/TextureRect3:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat64Array(0, 3.5),
+"transitions": PackedFloat64Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("MarginContainer/StoryContainer2/TextureRect:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat64Array(0, 5),
+"transitions": PackedFloat64Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("MarginContainer/StoryContainer2/TextureRect2:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat64Array(0, 7.5),
+"transitions": PackedFloat64Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("MarginContainer/StoryContainer2/TextureRect3:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat64Array(0, 9),
+"transitions": PackedFloat64Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("MarginContainer/StoryContainer3/GridContainer/TextureRect:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat64Array(0, 11),
+"transitions": PackedFloat64Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("MarginContainer/StoryContainer3/GridContainer/TextureRect2:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat64Array(0, 11.2),
+"transitions": PackedFloat64Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("MarginContainer/StoryContainer3/GridContainer/TextureRect3:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat64Array(0, 11.4),
+"transitions": PackedFloat64Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("MarginContainer/StoryContainer3/GridContainer/TextureRect4:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat64Array(0, 11.6),
+"transitions": PackedFloat64Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("MarginContainer/StoryContainer3/GridContainer/TextureRect5:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat64Array(0, 11.8),
+"transitions": PackedFloat64Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("MarginContainer/StoryContainer3/GridContainer/TextureRect6:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat64Array(0, 12),
+"transitions": PackedFloat64Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("MarginContainer/StoryContainer3/GridContainer/TextureRect7:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat64Array(0, 12.2),
+"transitions": PackedFloat64Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("MarginContainer/StoryContainer3/GridContainer/TextureRect8:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat64Array(0, 12.4),
+"transitions": PackedFloat64Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("MarginContainer/StoryContainer3/GridContainer/TextureRect9:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat64Array(0, 12.6),
+"transitions": PackedFloat64Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("MarginContainer/StoryContainer3/TextureRect2:modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat64Array(0, 13.5),
+"transitions": PackedFloat64Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("MarginContainer/StoryContainer3/VBoxContainer/TextureRect4:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat64Array(0, 15),
+"transitions": PackedFloat64Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("MarginContainer/StoryContainer3/VBoxContainer/TextureRect3:modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat64Array(0, 16.499998),
+"transitions": PackedFloat64Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tolrj"]
+_data = {
+&"RESET": SubResource("Animation_x36u0"),
+&"opening": SubResource("Animation_c7uss")
+}
+
+[node name="Presentation" type="Control" unique_id=1365986780]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1260123674]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 256
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 256
+theme_override_constants/margin_bottom = 64
+
+[node name="StoryContainer" type="HBoxContainer" parent="MarginContainer" unique_id=546046583]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/StoryContainer" unique_id=115716370]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("1_ii0do")
+stretch_mode = 3
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/StoryContainer" unique_id=522224938]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_11pcq")
+stretch_mode = 3
+
+[node name="TextureRect3" type="TextureRect" parent="MarginContainer/StoryContainer" unique_id=692261317]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("3_c7iy7")
+stretch_mode = 3
+
+[node name="StoryContainer2" type="HBoxContainer" parent="MarginContainer" unique_id=1348755073]
+visible = false
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/StoryContainer2" unique_id=171873023]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("4_xynpv")
+stretch_mode = 3
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/StoryContainer2" unique_id=66064188]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("5_hd6si")
+stretch_mode = 3
+
+[node name="TextureRect3" type="TextureRect" parent="MarginContainer/StoryContainer2" unique_id=1143108528]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("6_bdclc")
+stretch_mode = 3
+
+[node name="StoryContainer3" type="HBoxContainer" parent="MarginContainer" unique_id=2103678387]
+visible = false
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/StoryContainer3" unique_id=1343159290]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+columns = 3
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/StoryContainer3/GridContainer" unique_id=783963198]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("7_c7uss")
+stretch_mode = 3
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/StoryContainer3/GridContainer" unique_id=274854142]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("7_c7uss")
+stretch_mode = 3
+
+[node name="TextureRect3" type="TextureRect" parent="MarginContainer/StoryContainer3/GridContainer" unique_id=1887176434]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("7_c7uss")
+stretch_mode = 3
+
+[node name="TextureRect4" type="TextureRect" parent="MarginContainer/StoryContainer3/GridContainer" unique_id=426968223]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("7_c7uss")
+stretch_mode = 3
+
+[node name="TextureRect5" type="TextureRect" parent="MarginContainer/StoryContainer3/GridContainer" unique_id=1302437068]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("7_c7uss")
+stretch_mode = 3
+
+[node name="TextureRect6" type="TextureRect" parent="MarginContainer/StoryContainer3/GridContainer" unique_id=432138618]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("7_c7uss")
+stretch_mode = 3
+
+[node name="TextureRect7" type="TextureRect" parent="MarginContainer/StoryContainer3/GridContainer" unique_id=628455913]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("7_c7uss")
+stretch_mode = 3
+
+[node name="TextureRect8" type="TextureRect" parent="MarginContainer/StoryContainer3/GridContainer" unique_id=1710013136]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("7_c7uss")
+stretch_mode = 3
+
+[node name="TextureRect9" type="TextureRect" parent="MarginContainer/StoryContainer3/GridContainer" unique_id=147755356]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("7_c7uss")
+stretch_mode = 3
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/StoryContainer3" unique_id=2099836105]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("8_x36u0")
+stretch_mode = 3
+flip_v = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/StoryContainer3" unique_id=1804798990]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="TextureRect4" type="TextureRect" parent="MarginContainer/StoryContainer3/VBoxContainer" unique_id=2106628585]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("9_tolrj")
+stretch_mode = 3
+
+[node name="TextureRect3" type="TextureRect" parent="MarginContainer/StoryContainer3/VBoxContainer" unique_id=1050125102]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("10_6rc56")
+stretch_mode = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1433914274]
+libraries/ = SubResource("AnimationLibrary_tolrj")
+autoplay = &"opening"
