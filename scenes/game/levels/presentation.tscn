@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dwk6f3u7qdyf1"]
 
 [ext_resource type="Texture2D" uid="uid://c7fq3xy8ho6fh" path="res://assets/icons/earth-africa-europe.png" id="1_ii0do"]
+[ext_resource type="Script" uid="uid://dhxxidrkynm1n" path="res://scenes/game/levels/presentation.gd" id="1_tm3gv"]
 [ext_resource type="Texture2D" uid="uid://di18mf13dw7i3" path="res://assets/icons/ion-cannon-blast.png" id="2_11pcq"]
 [ext_resource type="Texture2D" uid="uid://747rvnibglbo" path="res://assets/icons/galaxy.png" id="3_c7iy7"]
 [ext_resource type="Texture2D" uid="uid://db4xlj6l4wlny" path="res://assets/icons/radar-dish.png" id="4_xynpv"]
@@ -537,6 +538,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_tm3gv")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1260123674]
 layout_mode = 1
@@ -703,3 +705,5 @@ stretch_mode = 3
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1433914274]
 libraries/ = SubResource("AnimationLibrary_tolrj")
 autoplay = &"opening"
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

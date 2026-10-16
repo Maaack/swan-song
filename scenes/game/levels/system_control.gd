@@ -1,4 +1,4 @@
-extends Control
+extends "./level.gd"
 
 @export var graph_scale:float = 1.0
 @onready var time_graph = %TimeGraph
