@@ -1,27 +1,31 @@
 ~ part_1
-Manager: So yesterday, satellites in the Eastern hemisphere of the Earth were hit with an X-ray blast from outer space.
+Manager: At approximately 09:39 UTC yesterday, satellites in the Eastern hemisphere of the Earth were hit with an X-ray blast from outer space.
 => END
 
 ~ part_2
-Manager: Numerous agencies focused their satellite dishes toward the source of the emission, and within a few hours, picked up a signal from an exoplanet 14 light-years away in the Goldilocks zone.
+Manager: Numerous agencies focused their satellite dishes toward the source of the emission, and within a few hours, picked up a signal from an exoplanet 14 light-years away.
 => END
 
 ~ part_3
-Manager: Based on the wobble of the host star, astronomers believe that a rogue gas giant has entered the system and disrupted the orbit of the signaling planet.
+Manager: That planet is known to sit in the habitable zone of its host star, suitable for water-based life. But based on the wobble of the host star, astronomers believe that a rogue gas giant has entered the system and disrupted the orbit of the signaling planet.
 => END
 
 ~ part_4
-Manager: If the source is a natural phenomenon, then its not something we’ve ever seen before. If source of the signal is intelligent life, thent his may be the last and only signal we get from an already dead civilization.
+Manager: If the source is a natural phenomenon, then its not something we’ve ever seen before. 
 => END
 
 ~ part_5
-Manager: In response to this unprecedented opportunity, space agencies world-wide have assembled hundreds of people to independently analyze and process the signal into readable data.
+Manager: If source of the signal is intelligent life, then this may be the last and only signal we get from an already dead civilization.
 => END
 
 ~ part_6
-Manager: People are being divided into teams of 4, with one lead and three analyzers, who will individually report findings to be corroborated with the others.
+Manager: In response to this unprecedented opportunity, space agencies world-wide have assembled hundreds of people to independently analyze and process the signal into readable data.
 => END
 
 ~ part_7
+Manager: People are being divided into teams of 4, with one lead and three analyzers, who will individually report findings to be corroborated with the others.
+=> END
+
+~ part_8
 Manager: Your first task will be to accurately divide the first signal into a time-series. This should inform us as to how to read the remaining signals and apply Fourier transforms to pick apart the individual frequencies.
 => END

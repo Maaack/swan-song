@@ -5,17 +5,21 @@ var animations : Array[StringName]= [
 	&'part_2',
 	&'part_3',
 	&'part_4',
+	&'part_5',
+	&'part_6',
 ]
 
 var current_animation_iter : int = -1
+var current_animation_name : String = ""
 @export var dialogue_resource : DialogueResource
 @onready var animation_player = %AnimationPlayer
 
 func _load_next_scene() -> void:
 	level_won.emit()
 
-func _on_animation_player_animation_finished(_anim_name):
-	_play_next_slide()
+func _on_animation_player_animation_finished(anim_name):
+	if current_animation_name == anim_name:
+		_play_next_slide()
 	
 func _event_skips_intro(event : InputEvent) -> bool:
 	return event.is_action_pressed(&"ui_cancel")
@@ -29,9 +33,13 @@ func _play_next_slide() -> void:
 	if current_animation_iter >= animations.size():
 		_load_next_scene()
 		return
-	var current_animation := animations[current_animation_iter]
-	animation_player.play(current_animation)
-	DialogueManager.show_dialogue_balloon(dialogue_resource, current_animation)
+	current_animation_name = animations[current_animation_iter]
+	animation_player.play(current_animation_name)
+	DialogueManager.show_dialogue_balloon(dialogue_resource, current_animation_name)
+
+func _on_dialogue_ended(_dialogue_name):
+	_play_next_slide()
 
 func _ready():
 	_play_next_slide()
+	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
