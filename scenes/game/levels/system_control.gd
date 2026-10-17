@@ -1,5 +1,6 @@
 extends "./level.gd"
 
+@export var dialogue_resource : DialogueResource
 @export var graph_scale:float = 1.0
 @onready var time_graph = %TimeGraph
 @onready var cycle_graph = %CycleGraph
@@ -62,3 +63,8 @@ func _on_signal_splits_value_changed(value):
 		var x = 2 * PI * i / float(value)
 		text += "%0.1f  " % FourierTransform.total_value(x, cycle_series).amp
 	result_text.text = text
+
+func _on_continue_button_pressed():
+	DialogueManager.show_dialogue_balloon(dialogue_resource, &"start")
+	await DialogueManager.dialogue_ended
+	level_won.emit()

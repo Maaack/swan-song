@@ -3,17 +3,25 @@ Manager: So yesterday, satellites in the Eastern hemisphere of the Earth were hi
 => END
 
 ~ part_2
-Manager: Numerous agencies focused their satellite dishes toward the source of the emission, and within a few hours, picked up a signal from an exoplanet 14 light-years away.
+Manager: Numerous agencies focused their satellite dishes toward the source of the emission, and within a few hours, picked up a signal from an exoplanet 14 light-years away in the Goldilocks zone.
 => END
 
 ~ part_3
-Manager: In response, space agencies world-wide have assembled hundreds of people to independently analyze and process the signal into readable data.
+Manager: Based on the wobble of the host star, astronomers believe that a rogue gas giant has entered the system and disrupted the orbit of the signaling planet.
 => END
 
 ~ part_4
-Manager: People are being divided into teams of 4, with one lead  and three analyzers, who will individually report findings to be corroborated with the others.
+Manager: If the source is a natural phenomenon, then its not something we’ve ever seen before. If source of the signal is intelligent life, thent his may be the last and only signal we get from an already dead civilization.
 => END
 
 ~ part_5
-Manager: Your first task will be to accurately divide the first signal into a time-series. This should inform us as to how to read the remaining four signals and apply Fourier transforms to pick apart the invidual frequencies.
+Manager: In response to this unprecedented opportunity, space agencies world-wide have assembled hundreds of people to independently analyze and process the signal into readable data.
+=> END
+
+~ part_6
+Manager: People are being divided into teams of 4, with one lead and three analyzers, who will individually report findings to be corroborated with the others.
+=> END
+
+~ part_7
+Manager: Your first task will be to accurately divide the first signal into a time-series. This should inform us as to how to read the remaining signals and apply Fourier transforms to pick apart the individual frequencies.
 => END

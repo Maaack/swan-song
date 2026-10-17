@@ -1,0 +1,29 @@
+~ start
+Manager: So what did you find? Any signs that the signal could be from an intelligent species?
+- Signal splits into even numbers.
+	Manager: Interesting. I'll corroborate your findings with the others.
+- Signal splits into odd numbers.
+	Manager: Interesting. I'll corroborate your findings with the others.
+- Signal splits into prime numbers.
+	Manager: Great! That corroborates the other findings. It's also a strong indicator of an intelligent source for the signal.
+- I have no idea.
+	Manager: That's fine. That's why there are others in each team.
+Manager: Based on how our team has divided the first signal, I believe the last part of the signal is made of 773 datapoints.
+You: Weren't there more parts of the signal to analyze before the last portion?
+Manager: The were several, and they're a slow build-up of ever increasingly challenging signals to guide us to the final solution.
+- So shouldn't we do them in order?
+- Aren't there some rules we're supposed to follow?
+- That sounds easier than jumping ahead.
+Manager: Each team operates independently, so nobody said we can't skip ahead if we're confident how to read the last one.
+- Are we confident?
+- I don't feel confident.
+- Uhh...
+Manager: I happen to know the next signal segments are guiding teams to transform the signals into their component frequencies with Discrete Fourier Transforms.
+Manager: Similar to your cyclograph, the amplitude of each frequency defines the radius of an epicycle.
+- A what?
+- Umm...
+- Oh, right that makes total sense.
+Manager: Like spirographs inside of other spirographs, we can use these to draw any kind of shape.
+Manager: I'm giving you a different toolset to process such a complex dataset.
+Manager: So let's beat the other teams and be the first to see what the aliens wanted humanity to see before their civilization froze over!
+=> END

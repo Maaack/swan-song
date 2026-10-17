@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b2b8j71xs8jsj"]
 
 [ext_resource type="Script" uid="uid://bh3rkqdqx2mtt" path="res://scenes/game/levels/system_control.gd" id="1_priev"]
+[ext_resource type="Resource" uid="uid://7su36hatq2bx" path="res://resources/dialogues/first_signal.dialogue" id="2_b4n85"]
 [ext_resource type="Script" uid="uid://hfjqg1fnsn16" path="res://scenes/game/cycle_graph.gd" id="2_h8i24"]
 [ext_resource type="Script" uid="uid://dttojb1d7b5hs" path="res://scenes/game/line_graph.gd" id="3_b4n85"]
 
@@ -12,6 +13,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_priev")
+dialogue_resource = ExtResource("2_b4n85")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1909090491]
 layout_mode = 1
@@ -138,7 +140,7 @@ editable = false
 layout_mode = 2
 alignment = 2
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1793539251]
+[node name="ContinueButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer5" unique_id=1793539251]
 layout_mode = 2
 text = "Continue"
 
@@ -147,3 +149,4 @@ text = "Continue"
 [connection signal="toggled" from="MarginContainer/VBoxContainer/HBoxContainer/TotalCheckBox" to="." method="_on_total_check_box_toggled"]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/HBoxContainer/PartsCheckBox" to="." method="_on_parts_check_box_toggled"]
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/HBoxContainer3/SignalSplits" to="." method="_on_signal_splits_value_changed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer5/ContinueButton" to="." method="_on_continue_button_pressed"]

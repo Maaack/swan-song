@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://7su36hatq2bx"
+path="res://.godot/imported/first_signal.dialogue-e6974725a564f1d12dbd1c39062bb945.tres"
+
+[deps]
+
+source_file="res://resources/dialogues/first_signal.dialogue"
+dest_files=["res://.godot/imported/first_signal.dialogue-e6974725a564f1d12dbd1c39062bb945.tres"]
+
+[params]
+
+defaults=true
