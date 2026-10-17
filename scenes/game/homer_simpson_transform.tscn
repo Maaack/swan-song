@@ -1,27 +1,27 @@
 [gd_scene format=3 uid="uid://ccetdtw0rsj18"]
 
-[ext_resource type="Script" uid="uid://b0agq5arshv4j" path="res://scenes/game/homer_simpson_transform.gd" id="1_fjxm6"]
-[ext_resource type="Script" uid="uid://2vp2njihlfek" path="res://resources/dataset/homer_drawing.gd" id="2_olfkc"]
-[ext_resource type="Script" uid="uid://dmhlhegovgg3q" path="res://scenes/game/fourier_cycles.gd" id="3_04omo"]
-[ext_resource type="Script" uid="uid://c7o8uqqpfkbxh" path="res://scenes/game/drawing.gd" id="4_egcob"]
+[ext_resource type="Script" uid="uid://b0agq5arshv4j" path="res://scenes/game/homer_simpson_transform.gd" id="1_f56k8"]
+[ext_resource type="Script" uid="uid://2vp2njihlfek" path="res://resources/dataset/homer_drawing.gd" id="2_ku8yn"]
+[ext_resource type="Script" uid="uid://dmhlhegovgg3q" path="res://scenes/game/fourier_cycles.gd" id="3_e7vuk"]
+[ext_resource type="Script" uid="uid://c7o8uqqpfkbxh" path="res://scenes/game/drawing.gd" id="4_0bsx4"]
 
 [node name="HomerSimpsonTransform" type="Node" unique_id=1806787966]
-script = ExtResource("1_fjxm6")
+script = ExtResource("1_f56k8")
 terms = 5
 scale = 50.0
 
 [node name="Dataset" type="Node" parent="." unique_id=336046175]
 unique_name_in_owner = true
-script = ExtResource("2_olfkc")
+script = ExtResource("2_ku8yn")
 
 [node name="FourierCycles" type="Node2D" parent="." unique_id=768182382]
 unique_name_in_owner = true
 position = Vector2(640, 400)
-script = ExtResource("3_04omo")
-time_mod = 0.38800900000000005
+script = ExtResource("3_e7vuk")
+time_mod = 0.30000000000000004
 terms = 600
 enabled = true
 
 [node name="Drawing" type="Node2D" parent="FourierCycles" unique_id=1586257912]
 unique_name_in_owner = true
-script = ExtResource("4_egcob")
+script = ExtResource("4_0bsx4")

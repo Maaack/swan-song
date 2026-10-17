@@ -1,19 +1,19 @@
 [gd_scene format=3 uid="uid://b2b8j71xs8jsj"]
 
-[ext_resource type="Script" uid="uid://bh3rkqdqx2mtt" path="res://scenes/game/levels/system_control.gd" id="1_priev"]
-[ext_resource type="Resource" uid="uid://7su36hatq2bx" path="res://resources/dialogues/first_signal.dialogue" id="2_b4n85"]
-[ext_resource type="Script" uid="uid://hfjqg1fnsn16" path="res://scenes/game/cycle_graph.gd" id="2_h8i24"]
-[ext_resource type="Script" uid="uid://dttojb1d7b5hs" path="res://scenes/game/line_graph.gd" id="3_b4n85"]
+[ext_resource type="Script" uid="uid://bh3rkqdqx2mtt" path="res://scenes/game/levels/first_signal.gd" id="1_yt4rf"]
+[ext_resource type="Resource" uid="uid://7su36hatq2bx" path="res://resources/dialogues/first_signal.dialogue" id="2_4kheo"]
+[ext_resource type="Script" uid="uid://hfjqg1fnsn16" path="res://scenes/game/cycle_graph.gd" id="3_hclse"]
+[ext_resource type="Script" uid="uid://dttojb1d7b5hs" path="res://scenes/game/line_graph.gd" id="4_tlr6i"]
 
-[node name="SystemControl" type="Control" unique_id=2125891572]
+[node name="FirstSignal" type="Control" unique_id=2125891572]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_priev")
-dialogue_resource = ExtResource("2_b4n85")
+script = ExtResource("1_yt4rf")
+dialogue_resource = ExtResource("2_4kheo")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1909090491]
 layout_mode = 1
@@ -85,7 +85,7 @@ size_flags_horizontal = 3
 
 [node name="CycleGraph" type="Node2D" parent="MarginContainer/VBoxContainer/HBoxContainer2/CenterContainer/CycleGraphControl" unique_id=493391469]
 unique_name_in_owner = true
-script = ExtResource("2_h8i24")
+script = ExtResource("3_hclse")
 
 [node name="CenterContainer2" type="CenterContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=757367572]
 layout_mode = 2
@@ -97,7 +97,7 @@ size_flags_horizontal = 3
 
 [node name="TimeGraph" type="Node2D" parent="MarginContainer/VBoxContainer/HBoxContainer2/CenterContainer2/TimeGraphControl" unique_id=1730672432]
 unique_name_in_owner = true
-script = ExtResource("3_b4n85")
+script = ExtResource("4_tlr6i")
 
 [node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=613284771]
 layout_mode = 2

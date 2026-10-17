@@ -35,7 +35,7 @@ scene_lister = NodePath("SceneLister")
 
 [node name="SceneLister" type="Node" parent="LevelManager" unique_id=673614733]
 script = ExtResource("10_h5e52")
-files = Array[String](["res://scenes/game/levels/title_screen.tscn", "res://scenes/game/levels/presentation.tscn", "res://scenes/game/levels/system_control.tscn"])
+files = Array[String](["res://scenes/game/levels/title_screen.tscn", "res://scenes/game/levels/presentation.tscn", "res://scenes/game/levels/first_signal.tscn", "res://scenes/game/levels/last_signal.tscn"])
 directory = "res://scenes/game/levels"
 
 [node name="LevelContainer" type="Node" parent="." unique_id=437554331]

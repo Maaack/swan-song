@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bsprcq4b8w51e"]
+
+[ext_resource type="Script" uid="uid://b0agq5arshv4j" path="res://scenes/game/homer_simpson_transform.gd" id="1_oupe0"]
+[ext_resource type="Script" uid="uid://2vp2njihlfek" path="res://resources/dataset/homer_drawing.gd" id="2_we28g"]
+[ext_resource type="Script" uid="uid://dmhlhegovgg3q" path="res://scenes/game/fourier_cycles.gd" id="3_ine82"]
+[ext_resource type="Script" uid="uid://c7o8uqqpfkbxh" path="res://scenes/game/drawing.gd" id="4_8e02v"]
+
+[node name="LastSignal" type="Control" unique_id=472592865]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HomerSimpsonTransform" type="Node" parent="." unique_id=1806787966]
+script = ExtResource("1_oupe0")
+terms = 5
+scale = 50.0
+
+[node name="Dataset" type="Node" parent="HomerSimpsonTransform" unique_id=336046175]
+unique_name_in_owner = true
+script = ExtResource("2_we28g")
+
+[node name="FourierCycles" type="Node2D" parent="." unique_id=768182382]
+unique_name_in_owner = true
+position = Vector2(640, 400)
+script = ExtResource("3_ine82")
+time_mod = 0.30000000000000004
+terms = 600
+enabled = true
+
+[node name="Drawing" type="Node2D" parent="FourierCycles" unique_id=1586257912]
+unique_name_in_owner = true
+script = ExtResource("4_8e02v")
