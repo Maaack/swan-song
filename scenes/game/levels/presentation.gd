@@ -7,7 +7,8 @@ var animations : Array[StringName]= [
 	&'part_4',
 ]
 
-var current_animation_iter : int = 0
+var current_animation_iter : int = -1
+@export var dialogue_resource : DialogueResource
 @onready var animation_player = %AnimationPlayer
 
 func _load_next_scene() -> void:
@@ -30,4 +31,7 @@ func _play_next_slide() -> void:
 		return
 	var current_animation := animations[current_animation_iter]
 	animation_player.play(current_animation)
-	
+	DialogueManager.show_dialogue_balloon(dialogue_resource, current_animation)
+
+func _ready():
+	_play_next_slide()

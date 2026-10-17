@@ -1,0 +1,19 @@
+~ part_1
+Manager: So yesterday, satellites in the Eastern hemisphere of the Earth were hit with an X-ray blast from outer space.
+=> END
+
+~ part_2
+Manager: Numerous agencies focused their satellite dishes toward the source of the emission, and within a few hours, picked up a signal from an exoplanet 14 light-years away.
+=> END
+
+~ part_3
+Manager: In response, space agencies world-wide have assembled hundreds of people to independently analyze and process the signal into readable data.
+=> END
+
+~ part_4
+Manager: People are being divided into teams of 4, with one lead  and three analyzers, who will individually report findings to be corroborated with the others.
+=> END
+
+~ part_5
+Manager: Your first task will be to accurately divide the first signal into a time-series. This should inform us as to how to read the remaining four signals and apply Fourier transforms to pick apart the invidual frequencies.
+=> END

@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c7fq3xy8ho6fh" path="res://assets/icons/earth-africa-europe.png" id="1_ii0do"]
 [ext_resource type="Script" uid="uid://dhxxidrkynm1n" path="res://scenes/game/levels/presentation.gd" id="1_tm3gv"]
 [ext_resource type="Texture2D" uid="uid://di18mf13dw7i3" path="res://assets/icons/ion-cannon-blast.png" id="2_11pcq"]
+[ext_resource type="Resource" uid="uid://dq47n6e6b6jsb" path="res://resources/dialogues/presentation.dialogue" id="2_xiney"]
 [ext_resource type="Texture2D" uid="uid://747rvnibglbo" path="res://assets/icons/galaxy.png" id="3_c7iy7"]
 [ext_resource type="Texture2D" uid="uid://db4xlj6l4wlny" path="res://assets/icons/radar-dish.png" id="4_xynpv"]
 [ext_resource type="Texture2D" uid="uid://dyvy3es6dlv31" path="res://assets/icons/amplitude.png" id="5_hd6si"]
@@ -881,6 +882,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tm3gv")
+dialogue_resource = ExtResource("2_xiney")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1260123674]
 layout_mode = 1
