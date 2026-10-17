@@ -72,31 +72,55 @@ visible = false
 layout_mode = 2
 text = "Ticks"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1007901136]
+[node name="OriginalSignalContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1007901136]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=788248473]
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer/OriginalSignalContainer" unique_id=788248473]
 custom_minimum_size = Vector2(240, 0)
 layout_mode = 2
 
-[node name="CycleGraphControl" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer2/CenterContainer" unique_id=935870775]
+[node name="CenterContainer2" type="CenterContainer" parent="MarginContainer/VBoxContainer/OriginalSignalContainer" unique_id=757367572]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="CycleGraph" type="Node2D" parent="MarginContainer/VBoxContainer/HBoxContainer2/CenterContainer/CycleGraphControl" unique_id=493391469]
+[node name="TimeGraphControl" type="Control" parent="MarginContainer/VBoxContainer/OriginalSignalContainer/CenterContainer2" unique_id=78371938]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="OriginalTimeGraph" type="Node2D" parent="MarginContainer/VBoxContainer/OriginalSignalContainer/CenterContainer2/TimeGraphControl" unique_id=1730672432]
+unique_name_in_owner = true
+script = ExtResource("4_tlr6i")
+show_parts = false
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=1937577110]
+layout_mode = 2
+
+[node name="ProcessedSignalContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=10921582]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer/ProcessedSignalContainer" unique_id=265028981]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+
+[node name="CycleGraphControl" type="Control" parent="MarginContainer/VBoxContainer/ProcessedSignalContainer/CenterContainer" unique_id=834858176]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CycleGraph" type="Node2D" parent="MarginContainer/VBoxContainer/ProcessedSignalContainer/CenterContainer/CycleGraphControl" unique_id=951414982]
 unique_name_in_owner = true
 script = ExtResource("3_hclse")
 
-[node name="CenterContainer2" type="CenterContainer" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=757367572]
+[node name="CenterContainer2" type="CenterContainer" parent="MarginContainer/VBoxContainer/ProcessedSignalContainer" unique_id=463999331]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="TimeGraphControl" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer2/CenterContainer2" unique_id=78371938]
+[node name="TimeGraphControl" type="Control" parent="MarginContainer/VBoxContainer/ProcessedSignalContainer/CenterContainer2" unique_id=156931882]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="TimeGraph" type="Node2D" parent="MarginContainer/VBoxContainer/HBoxContainer2/CenterContainer2/TimeGraphControl" unique_id=1730672432]
+[node name="TimeGraph" type="Node2D" parent="MarginContainer/VBoxContainer/ProcessedSignalContainer/CenterContainer2/TimeGraphControl" unique_id=261069256]
 unique_name_in_owner = true
 script = ExtResource("4_tlr6i")
 

@@ -8,6 +8,7 @@ extends "./level.gd"
 @onready var time_series_input = %TimeSeriesInput
 @onready var signal_splits = %SignalSplits
 @onready var result_text = %ResultText
+@onready var original_time_graph = %OriginalTimeGraph
 
 func parse_time_series(input:String) -> PackedFloat64Array:
 	return input.split_floats(" ", false)
@@ -35,13 +36,18 @@ func _draw_cycle_series(cycle_series:Array[SpectrumData]):
 	time_graph.cycle_series = cycle_series
 	cycle_graph.cycle_series = cycle_series
 
-func _process_time_series(text:String):
+func _process_original_time_series(text:String):
+	var time_series = parse_time_series(text)
+	var cycle_series = FourierTransform.dft(time_series)
+	original_time_graph.cycle_series = cycle_series
+
+func _process_test_time_series(text:String):
 	var time_series = parse_time_series(text)
 	var cycle_series = FourierTransform.dft(time_series)
 	_draw_cycle_series(cycle_series)
 
 func _on_time_series_input_text_submitted(new_text:String):
-	_process_time_series(new_text)
+	_process_original_time_series(new_text)
 
 func _on_cycle_series_input_text_submitted(new_text):
 	var parsed_cycles = parse_cycle_series(new_text)
@@ -59,13 +65,14 @@ func _on_parts_check_box_toggled(toggled_on):
 	cycle_graph.show_combined = toggled_on
 
 func _on_signal_splits_value_changed(value):
-	var cycle_series = time_graph.cycle_series
+	var cycle_series = original_time_graph.cycle_series
 	var cycle_series_size = cycle_series.size()
 	var text = ""
 	for i in range(0, value):
 		var x = 2 * PI * i / float(value)
 		text += "%0.1f  " % FourierTransform.total_value(x, cycle_series).amp
 	result_text.text = text
+	_process_test_time_series(text)
 
 func _on_continue_button_pressed():
 	DialogueManager.show_dialogue_balloon(dialogue_resource, &"start")
@@ -73,4 +80,4 @@ func _on_continue_button_pressed():
 	level_won.emit()
 
 func _ready():
-	_process_time_series("2 3 5 7 11 13 17 19 23")
+	_process_original_time_series("2 3 5 7 11 13 17 19 23")
