@@ -35,10 +35,13 @@ func _draw_cycle_series(cycle_series:Array[SpectrumData]):
 	time_graph.cycle_series = cycle_series
 	cycle_graph.cycle_series = cycle_series
 
-func _on_time_series_input_text_submitted(new_text:String):
-	var time_series = parse_time_series(new_text)
+func _process_time_series(text:String):
+	var time_series = parse_time_series(text)
 	var cycle_series = FourierTransform.dft(time_series)
 	_draw_cycle_series(cycle_series)
+
+func _on_time_series_input_text_submitted(new_text:String):
+	_process_time_series(new_text)
 
 func _on_cycle_series_input_text_submitted(new_text):
 	var parsed_cycles = parse_cycle_series(new_text)
@@ -68,3 +71,6 @@ func _on_continue_button_pressed():
 	DialogueManager.show_dialogue_balloon(dialogue_resource, &"start")
 	await DialogueManager.dialogue_ended
 	level_won.emit()
+
+func _ready():
+	_process_time_series("2 3 5 7 11 13 17 19 23")
