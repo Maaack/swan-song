@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cwd8qvre87an1" path="res://assets/icons/distress-signal.png" id="6_bdclc"]
 [ext_resource type="Texture2D" uid="uid://5v6qyc61y7lb" path="res://assets/icons/dozen.png" id="7_c7uss"]
 [ext_resource type="Texture2D" uid="uid://n6fjpyuhydsc" path="res://assets/icons/targeting.png" id="8_3awx0"]
-[ext_resource type="Texture2D" uid="uid://bxj4nh0vwkvae" path="res://assets/icons/family-tree.png" id="8_x36u0"]
+[ext_resource type="Texture2D" uid="uid://qbaelralacu2" path="res://assets/icons/sound-waves.png" id="9_7c2m3"]
 [ext_resource type="Texture2D" uid="uid://drwf1krik88kr" path="res://assets/icons/teacher.png" id="9_tolrj"]
 [ext_resource type="Texture2D" uid="uid://dl41trqw4l4be" path="res://assets/icons/team-downgrade.png" id="10_6rc56"]
 [ext_resource type="Texture2D" uid="uid://drovugbnplbx3" path="res://assets/icons/thermometer-hot.png" id="10_fh6ri"]
@@ -23,7 +23,14 @@
 [ext_resource type="Texture2D" uid="uid://81djuqx2xec1" path="res://assets/icons/sight-disabled.png" id="17_6di4v"]
 [ext_resource type="Texture2D" uid="uid://d0ub5xbd32nix" path="res://assets/icons/frontal-lobe.png" id="18_f71nu"]
 [ext_resource type="Texture2D" uid="uid://df3r0vloi50q6" path="res://assets/icons/omega.png" id="19_ea785"]
-[ext_resource type="Texture2D" uid="uid://cwv6ukokjjlup" path="res://assets/icons/dead-head.png" id="20_hseu7"]
+[ext_resource type="Texture2D" uid="uid://h11k5nwgvmj0" path="res://assets/icons/skull-crossed-bones.png" id="20_7c2m3"]
+[ext_resource type="Texture2D" uid="uid://b2cad2b2mwssl" path="res://assets/icons/alien-stare.png" id="21_858xu"]
+[ext_resource type="Texture2D" uid="uid://cnoa7ru6lwhio" path="res://assets/icons/magnifying-glass.png" id="22_srd3a"]
+[ext_resource type="Texture2D" uid="uid://qlpdj56gqvi0" path="res://assets/icons/processor.png" id="23_6di4v"]
+[ext_resource type="Texture2D" uid="uid://bhb283b38fgme" path="res://assets/icons/organigram.png" id="25_r04lr"]
+[ext_resource type="Texture2D" uid="uid://daq1qyn6dy313" path="res://assets/icons/notebook.png" id="27_hseu7"]
+[ext_resource type="Texture2D" uid="uid://ciij3s2bk0yk7" path="res://assets/icons/stopwatch.png" id="28_7c2m3"]
+[ext_resource type="Texture2D" uid="uid://c1fbg1wsm78u7" path="res://assets/icons/diagram.png" id="29_7c2m3"]
 
 [sub_resource type="Animation" id="Animation_x36u0"]
 length = 0.001
@@ -258,7 +265,7 @@ tracks/18/keys = {
 tracks/19/type = "value"
 tracks/19/imported = false
 tracks/19/enabled = true
-tracks/19/path = NodePath("MarginContainer/StoryContainer6/VBoxContainer/TextureRect4:modulate")
+tracks/19/path = NodePath("MarginContainer/StoryContainer6/TextureRect3:modulate")
 tracks/19/interp = 1
 tracks/19/loop_wrap = true
 tracks/19/keys = {
@@ -270,43 +277,43 @@ tracks/19/keys = {
 tracks/20/type = "value"
 tracks/20/imported = false
 tracks/20/enabled = true
-tracks/20/path = NodePath("MarginContainer/StoryContainer6/VBoxContainer/TextureRect3:modulate")
+tracks/20/path = NodePath("MarginContainer/StoryContainer/TextureRect4:modulate")
 tracks/20/interp = 1
 tracks/20/loop_wrap = true
 tracks/20/keys = {
 "times": PackedFloat64Array(0),
 "transitions": PackedFloat64Array(1),
-"update": 1,
+"update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
 tracks/21/type = "value"
 tracks/21/imported = false
 tracks/21/enabled = true
-tracks/21/path = NodePath("MarginContainer/StoryContainer/TextureRect4:modulate")
+tracks/21/path = NodePath("MarginContainer/StoryContainer3:visible")
 tracks/21/interp = 1
 tracks/21/loop_wrap = true
 tracks/21/keys = {
 "times": PackedFloat64Array(0),
 "transitions": PackedFloat64Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
+"update": 1,
+"values": [false]
 }
 tracks/22/type = "value"
 tracks/22/imported = false
 tracks/22/enabled = true
-tracks/22/path = NodePath("MarginContainer/StoryContainer3:visible")
+tracks/22/path = NodePath("MarginContainer/StoryContainer3/TextureRect:modulate")
 tracks/22/interp = 1
 tracks/22/loop_wrap = true
 tracks/22/keys = {
 "times": PackedFloat64Array(0),
 "transitions": PackedFloat64Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
 }
 tracks/23/type = "value"
 tracks/23/imported = false
 tracks/23/enabled = true
-tracks/23/path = NodePath("MarginContainer/StoryContainer3/TextureRect:modulate")
+tracks/23/path = NodePath("MarginContainer/StoryContainer3/TextureRect2:modulate")
 tracks/23/interp = 1
 tracks/23/loop_wrap = true
 tracks/23/keys = {
@@ -318,7 +325,7 @@ tracks/23/keys = {
 tracks/24/type = "value"
 tracks/24/imported = false
 tracks/24/enabled = true
-tracks/24/path = NodePath("MarginContainer/StoryContainer3/TextureRect2:modulate")
+tracks/24/path = NodePath("MarginContainer/StoryContainer3/TextureRect3:modulate")
 tracks/24/interp = 1
 tracks/24/loop_wrap = true
 tracks/24/keys = {
@@ -330,7 +337,7 @@ tracks/24/keys = {
 tracks/25/type = "value"
 tracks/25/imported = false
 tracks/25/enabled = true
-tracks/25/path = NodePath("MarginContainer/StoryContainer3/TextureRect3:modulate")
+tracks/25/path = NodePath("MarginContainer/StoryContainer3/TextureRect4:modulate")
 tracks/25/interp = 1
 tracks/25/loop_wrap = true
 tracks/25/keys = {
@@ -342,7 +349,7 @@ tracks/25/keys = {
 tracks/26/type = "value"
 tracks/26/imported = false
 tracks/26/enabled = true
-tracks/26/path = NodePath("MarginContainer/StoryContainer3/TextureRect4:modulate")
+tracks/26/path = NodePath("MarginContainer/StoryContainer3/TextureRect5:modulate")
 tracks/26/interp = 1
 tracks/26/loop_wrap = true
 tracks/26/keys = {
@@ -354,7 +361,7 @@ tracks/26/keys = {
 tracks/27/type = "value"
 tracks/27/imported = false
 tracks/27/enabled = true
-tracks/27/path = NodePath("MarginContainer/StoryContainer3/TextureRect5:modulate")
+tracks/27/path = NodePath("MarginContainer/StoryContainer2/TextureRect4:modulate")
 tracks/27/interp = 1
 tracks/27/loop_wrap = true
 tracks/27/keys = {
@@ -366,31 +373,31 @@ tracks/27/keys = {
 tracks/28/type = "value"
 tracks/28/imported = false
 tracks/28/enabled = true
-tracks/28/path = NodePath("MarginContainer/StoryContainer2/TextureRect4:modulate")
+tracks/28/path = NodePath("MarginContainer/StoryContainer4:visible")
 tracks/28/interp = 1
 tracks/28/loop_wrap = true
 tracks/28/keys = {
 "times": PackedFloat64Array(0),
 "transitions": PackedFloat64Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
+"update": 1,
+"values": [false]
 }
 tracks/29/type = "value"
 tracks/29/imported = false
 tracks/29/enabled = true
-tracks/29/path = NodePath("MarginContainer/StoryContainer4:visible")
+tracks/29/path = NodePath("MarginContainer/StoryContainer4/TextureRect:modulate")
 tracks/29/interp = 1
 tracks/29/loop_wrap = true
 tracks/29/keys = {
 "times": PackedFloat64Array(0),
 "transitions": PackedFloat64Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
 }
 tracks/30/type = "value"
 tracks/30/imported = false
 tracks/30/enabled = true
-tracks/30/path = NodePath("MarginContainer/StoryContainer4/TextureRect:modulate")
+tracks/30/path = NodePath("MarginContainer/StoryContainer4/TextureRect2:modulate")
 tracks/30/interp = 1
 tracks/30/loop_wrap = true
 tracks/30/keys = {
@@ -402,31 +409,31 @@ tracks/30/keys = {
 tracks/31/type = "value"
 tracks/31/imported = false
 tracks/31/enabled = true
-tracks/31/path = NodePath("MarginContainer/StoryContainer4/TextureRect2:modulate")
+tracks/31/path = NodePath("MarginContainer/StoryContainer5:visible")
 tracks/31/interp = 1
 tracks/31/loop_wrap = true
 tracks/31/keys = {
 "times": PackedFloat64Array(0),
 "transitions": PackedFloat64Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
+"update": 1,
+"values": [false]
 }
 tracks/32/type = "value"
 tracks/32/imported = false
 tracks/32/enabled = true
-tracks/32/path = NodePath("MarginContainer/StoryContainer5:visible")
+tracks/32/path = NodePath("MarginContainer/StoryContainer5/TextureRect:modulate")
 tracks/32/interp = 1
 tracks/32/loop_wrap = true
 tracks/32/keys = {
 "times": PackedFloat64Array(0),
 "transitions": PackedFloat64Array(1),
-"update": 1,
-"values": [false]
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
 }
 tracks/33/type = "value"
 tracks/33/imported = false
 tracks/33/enabled = true
-tracks/33/path = NodePath("MarginContainer/StoryContainer5/TextureRect:modulate")
+tracks/33/path = NodePath("MarginContainer/StoryContainer5/TextureRect2:modulate")
 tracks/33/interp = 1
 tracks/33/loop_wrap = true
 tracks/33/keys = {
@@ -438,7 +445,7 @@ tracks/33/keys = {
 tracks/34/type = "value"
 tracks/34/imported = false
 tracks/34/enabled = true
-tracks/34/path = NodePath("MarginContainer/StoryContainer5/TextureRect2:modulate")
+tracks/34/path = NodePath("MarginContainer/StoryContainer5/TextureRect3:modulate")
 tracks/34/interp = 1
 tracks/34/loop_wrap = true
 tracks/34/keys = {
@@ -450,10 +457,130 @@ tracks/34/keys = {
 tracks/35/type = "value"
 tracks/35/imported = false
 tracks/35/enabled = true
-tracks/35/path = NodePath("MarginContainer/StoryContainer5/TextureRect3:modulate")
+tracks/35/path = NodePath("MarginContainer/StoryContainer7:visible")
 tracks/35/interp = 1
 tracks/35/loop_wrap = true
 tracks/35/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("MarginContainer/StoryContainer7/TextureRect:modulate")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("MarginContainer/StoryContainer7/TextureRect2:modulate")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/38/type = "value"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("MarginContainer/StoryContainer7/VBoxContainer/TextureRect4:modulate")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/39/type = "value"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("MarginContainer/StoryContainer7/VBoxContainer/TextureRect5:modulate")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/40/type = "value"
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/path = NodePath("MarginContainer/StoryContainer7/TextureRect3:modulate")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/41/type = "value"
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/path = NodePath("MarginContainer/StoryContainer8:visible")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/42/type = "value"
+tracks/42/imported = false
+tracks/42/enabled = true
+tracks/42/path = NodePath("MarginContainer/StoryContainer8/TextureRect:modulate")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/43/type = "value"
+tracks/43/imported = false
+tracks/43/enabled = true
+tracks/43/path = NodePath("MarginContainer/StoryContainer8/TextureRect2:modulate")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/44/type = "value"
+tracks/44/imported = false
+tracks/44/enabled = true
+tracks/44/path = NodePath("MarginContainer/StoryContainer8/TextureRect3:modulate")
+tracks/44/interp = 1
+tracks/44/loop_wrap = true
+tracks/44/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/45/type = "value"
+tracks/45/imported = false
+tracks/45/enabled = true
+tracks/45/path = NodePath("MarginContainer/StoryContainer5/TextureRect4:modulate")
+tracks/45/interp = 1
+tracks/45/loop_wrap = true
+tracks/45/keys = {
 "times": PackedFloat64Array(0),
 "transitions": PackedFloat64Array(1),
 "update": 0,
@@ -551,7 +678,7 @@ tracks/6/keys = {
 
 [sub_resource type="Animation" id="Animation_tm3gv"]
 resource_name = "part_2"
-length = 6.0
+length = 8.0
 step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -628,7 +755,7 @@ tracks/5/keys = {
 
 [sub_resource type="Animation" id="Animation_qylr6"]
 resource_name = "part_3"
-length = 7.5
+length = 10.0
 step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -721,15 +848,20 @@ tracks/7/path = NodePath("MarginContainer/StoryContainer3/TextureRect5:modulate"
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat64Array(0, 3.7),
+"times": PackedFloat64Array(0, 4),
 "transitions": PackedFloat64Array(1, 1),
 "update": 1,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_858xu"]
+resource_name = "part_3_5"
+length = 10.0
+step = 0.1
+
 [sub_resource type="Animation" id="Animation_pjsks"]
 resource_name = "part_4"
-length = 4.0
+length = 5.0
 step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -782,7 +914,7 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id="Animation_6di4v"]
 resource_name = "part_5"
-length = 4.0
+length = 8.0
 step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -827,7 +959,7 @@ tracks/3/path = NodePath("MarginContainer/StoryContainer5/TextureRect2:modulate"
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat64Array(0, 1.2),
+"times": PackedFloat64Array(0, 2),
 "transitions": PackedFloat64Array(1, 1),
 "update": 1,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -839,7 +971,19 @@ tracks/4/path = NodePath("MarginContainer/StoryContainer5/TextureRect3:modulate"
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat64Array(0, 2),
+"times": PackedFloat64Array(0, 2.8),
+"transitions": PackedFloat64Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MarginContainer/StoryContainer5/TextureRect4:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat64Array(0, 1),
 "transitions": PackedFloat64Array(1, 1),
 "update": 1,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -847,7 +991,7 @@ tracks/4/keys = {
 
 [sub_resource type="Animation" id="Animation_xiney"]
 resource_name = "part_6"
-length = 8.0
+length = 7.0
 step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -892,7 +1036,7 @@ tracks/3/path = NodePath("MarginContainer/StoryContainer6/GridContainer/TextureR
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat64Array(0, 2),
+"times": PackedFloat64Array(0, 0.79999995),
 "transitions": PackedFloat64Array(1, 1),
 "update": 1,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -904,7 +1048,7 @@ tracks/4/path = NodePath("MarginContainer/StoryContainer6/GridContainer/TextureR
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat64Array(0, 2.1999998),
+"times": PackedFloat64Array(0, 0.99999976),
 "transitions": PackedFloat64Array(1, 1),
 "update": 1,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -916,7 +1060,7 @@ tracks/5/path = NodePath("MarginContainer/StoryContainer6/GridContainer/TextureR
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat64Array(0, 2.3999996),
+"times": PackedFloat64Array(0, 1.1999996),
 "transitions": PackedFloat64Array(1, 1),
 "update": 1,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -928,7 +1072,7 @@ tracks/6/path = NodePath("MarginContainer/StoryContainer6/GridContainer/TextureR
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat64Array(0, 2.6000004),
+"times": PackedFloat64Array(0, 1.4000003),
 "transitions": PackedFloat64Array(1, 1),
 "update": 1,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -940,7 +1084,7 @@ tracks/7/path = NodePath("MarginContainer/StoryContainer6/GridContainer/TextureR
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat64Array(0, 2.8000002),
+"times": PackedFloat64Array(0, 1.6000001),
 "transitions": PackedFloat64Array(1, 1),
 "update": 1,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -952,7 +1096,7 @@ tracks/8/path = NodePath("MarginContainer/StoryContainer6/GridContainer/TextureR
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat64Array(0, 3),
+"times": PackedFloat64Array(0, 1.8),
 "transitions": PackedFloat64Array(1, 1),
 "update": 1,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -964,7 +1108,7 @@ tracks/9/path = NodePath("MarginContainer/StoryContainer6/GridContainer/TextureR
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat64Array(0, 3.1999998),
+"times": PackedFloat64Array(0, 1.9999998),
 "transitions": PackedFloat64Array(1, 1),
 "update": 1,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -976,7 +1120,7 @@ tracks/10/path = NodePath("MarginContainer/StoryContainer6/GridContainer/Texture
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat64Array(0, 3.3999996),
+"times": PackedFloat64Array(0, 2.1999996),
 "transitions": PackedFloat64Array(1, 1),
 "update": 1,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -988,7 +1132,7 @@ tracks/11/path = NodePath("MarginContainer/StoryContainer6/GridContainer/Texture
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
-"times": PackedFloat64Array(0, 3.6000004),
+"times": PackedFloat64Array(0, 2.4000003),
 "transitions": PackedFloat64Array(1, 1),
 "update": 1,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -1000,7 +1144,7 @@ tracks/12/path = NodePath("MarginContainer/StoryContainer6/TextureRect2:modulate
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
-"times": PackedFloat64Array(0, 4.5),
+"times": PackedFloat64Array(0, 3.2),
 "transitions": PackedFloat64Array(1, 1),
 "update": 1,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -1008,11 +1152,11 @@ tracks/12/keys = {
 tracks/13/type = "value"
 tracks/13/imported = false
 tracks/13/enabled = true
-tracks/13/path = NodePath("MarginContainer/StoryContainer6/VBoxContainer/TextureRect4:modulate")
+tracks/13/path = NodePath("MarginContainer/StoryContainer6/TextureRect3:modulate")
 tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
-"times": PackedFloat64Array(0, 6),
+"times": PackedFloat64Array(0, 4),
 "transitions": PackedFloat64Array(1, 1),
 "update": 1,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -1020,11 +1164,165 @@ tracks/13/keys = {
 tracks/14/type = "value"
 tracks/14/imported = false
 tracks/14/enabled = true
-tracks/14/path = NodePath("MarginContainer/StoryContainer6/VBoxContainer/TextureRect3:modulate")
+tracks/14/path = NodePath("MarginContainer/StoryContainer5:visible")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
-"times": PackedFloat64Array(0, 7.499998),
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_srd3a"]
+resource_name = "part_7"
+length = 6.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/StoryContainer6:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer/StoryContainer7:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MarginContainer/StoryContainer7/TextureRect:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat64Array(0, 0.6),
+"transitions": PackedFloat64Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MarginContainer/StoryContainer7/TextureRect2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat64Array(0, 1.2),
+"transitions": PackedFloat64Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MarginContainer/StoryContainer7/VBoxContainer/TextureRect4:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat64Array(0, 1.8),
+"transitions": PackedFloat64Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("MarginContainer/StoryContainer7/VBoxContainer/TextureRect5:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat64Array(0, 2.4),
+"transitions": PackedFloat64Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("MarginContainer/StoryContainer7/TextureRect3:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat64Array(0, 3),
+"transitions": PackedFloat64Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_hseu7"]
+resource_name = "part_8"
+length = 7.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer/StoryContainer7:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MarginContainer/StoryContainer8:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MarginContainer/StoryContainer8/TextureRect:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat64Array(0, 0.8),
+"transitions": PackedFloat64Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MarginContainer/StoryContainer8/TextureRect2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat64Array(0, 1.4),
+"transitions": PackedFloat64Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("MarginContainer/StoryContainer8/TextureRect3:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat64Array(0, 2),
 "transitions": PackedFloat64Array(1, 1),
 "update": 1,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -1036,9 +1334,12 @@ _data = {
 &"part_1": SubResource("Animation_c7uss"),
 &"part_2": SubResource("Animation_tm3gv"),
 &"part_3": SubResource("Animation_qylr6"),
+&"part_3_5": SubResource("Animation_858xu"),
 &"part_4": SubResource("Animation_pjsks"),
 &"part_5": SubResource("Animation_6di4v"),
-&"part_6": SubResource("Animation_xiney")
+&"part_6": SubResource("Animation_xiney"),
+&"part_7": SubResource("Animation_srd3a"),
+&"part_8": SubResource("Animation_hseu7")
 }
 
 [node name="Presentation" type="Control" unique_id=1365986780]
@@ -1122,7 +1423,7 @@ stretch_mode = 3
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("5_hd6si")
+texture = ExtResource("9_7c2m3")
 stretch_mode = 3
 
 [node name="TextureRect4" type="TextureRect" parent="MarginContainer/StoryContainer2" unique_id=443703126]
@@ -1171,6 +1472,45 @@ size_flags_horizontal = 3
 texture = ExtResource("15_0jxkl")
 stretch_mode = 3
 
+[node name="StoryContainer3_5" type="HBoxContainer" parent="MarginContainer" unique_id=665206781]
+visible = false
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/StoryContainer3_5" unique_id=1520520370]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("10_fh6ri")
+stretch_mode = 3
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/StoryContainer3_5" unique_id=1096106791]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("11_ejca1")
+stretch_mode = 3
+
+[node name="TextureRect3" type="TextureRect" parent="MarginContainer/StoryContainer3_5" unique_id=534056716]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("12_3awx0")
+stretch_mode = 3
+
+[node name="TextureRect4" type="TextureRect" parent="MarginContainer/StoryContainer3_5" unique_id=107161845]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("13_0jxkl")
+stretch_mode = 3
+
+[node name="TextureRect5" type="TextureRect" parent="MarginContainer/StoryContainer3_5" unique_id=1782279877]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("15_0jxkl")
+stretch_mode = 3
+
 [node name="StoryContainer4" type="HBoxContainer" parent="MarginContainer" unique_id=698832141]
 visible = false
 layout_mode = 2
@@ -1200,6 +1540,13 @@ size_flags_horizontal = 3
 texture = ExtResource("18_f71nu")
 stretch_mode = 3
 
+[node name="TextureRect4" type="TextureRect" parent="MarginContainer/StoryContainer5" unique_id=245035015]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("21_858xu")
+stretch_mode = 3
+
 [node name="TextureRect2" type="TextureRect" parent="MarginContainer/StoryContainer5" unique_id=1824226084]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
@@ -1211,7 +1558,7 @@ stretch_mode = 3
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("20_hseu7")
+texture = ExtResource("20_7c2m3")
 stretch_mode = 3
 
 [node name="StoryContainer6" type="HBoxContainer" parent="MarginContainer" unique_id=2103678387]
@@ -1291,28 +1638,84 @@ stretch_mode = 3
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("8_x36u0")
+texture = ExtResource("22_srd3a")
 stretch_mode = 3
-flip_v = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/StoryContainer6" unique_id=1804798990]
+[node name="TextureRect3" type="TextureRect" parent="MarginContainer/StoryContainer6" unique_id=1050125102]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("23_6di4v")
+stretch_mode = 3
+
+[node name="StoryContainer7" type="HBoxContainer" parent="MarginContainer" unique_id=588829043]
+visible = false
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/StoryContainer7" unique_id=392699034]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("7_c7uss")
+stretch_mode = 3
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/StoryContainer7" unique_id=1698420214]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("25_r04lr")
+stretch_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/StoryContainer7" unique_id=1015862320]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 32
 alignment = 1
 
-[node name="TextureRect4" type="TextureRect" parent="MarginContainer/StoryContainer6/VBoxContainer" unique_id=2106628585]
+[node name="TextureRect4" type="TextureRect" parent="MarginContainer/StoryContainer7/VBoxContainer" unique_id=1887731330]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("9_tolrj")
 stretch_mode = 3
 
-[node name="TextureRect3" type="TextureRect" parent="MarginContainer/StoryContainer6/VBoxContainer" unique_id=1050125102]
+[node name="TextureRect5" type="TextureRect" parent="MarginContainer/StoryContainer7/VBoxContainer" unique_id=502335237]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("10_6rc56")
+stretch_mode = 3
+
+[node name="TextureRect3" type="TextureRect" parent="MarginContainer/StoryContainer7" unique_id=1455971084]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("27_hseu7")
+stretch_mode = 3
+
+[node name="StoryContainer8" type="HBoxContainer" parent="MarginContainer" unique_id=1088061139]
+visible = false
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/StoryContainer8" unique_id=1497566806]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("28_7c2m3")
+stretch_mode = 3
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/StoryContainer8" unique_id=458039095]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("29_7c2m3")
+stretch_mode = 3
+
+[node name="TextureRect3" type="TextureRect" parent="MarginContainer/StoryContainer8" unique_id=194440989]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("5_hd6si")
 stretch_mode = 3
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

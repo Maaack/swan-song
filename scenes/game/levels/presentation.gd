@@ -7,10 +7,13 @@ var animations : Array[StringName]= [
 	&'part_4',
 	&'part_5',
 	&'part_6',
+	&'part_7',
+	&'part_8',
 ]
 
 var current_animation_iter : int = -1
 var current_animation_name : String = ""
+var current_dialogue_balloon : Node
 @export var dialogue_resource : DialogueResource
 @onready var animation_player = %AnimationPlayer
 
@@ -35,7 +38,9 @@ func _play_next_slide() -> void:
 		return
 	current_animation_name = animations[current_animation_iter]
 	animation_player.play(current_animation_name)
-	DialogueManager.show_dialogue_balloon(dialogue_resource, current_animation_name)
+	if is_instance_valid(current_dialogue_balloon):
+		current_dialogue_balloon.queue_free()
+	current_dialogue_balloon = DialogueManager.show_dialogue_balloon(dialogue_resource, current_animation_name)
 
 func _on_dialogue_ended(_dialogue_name):
 	_play_next_slide()
