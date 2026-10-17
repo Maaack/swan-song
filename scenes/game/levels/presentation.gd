@@ -4,6 +4,7 @@ var animations : Array[StringName]= [
 	&'part_1',
 	&'part_2',
 	&'part_3',
+	&'part_3_5',
 	&'part_4',
 	&'part_5',
 	&'part_6',
