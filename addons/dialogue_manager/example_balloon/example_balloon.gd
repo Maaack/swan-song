@@ -18,7 +18,10 @@ class_name DialogueManagerExampleBalloon extends CanvasLayer
 @export var next_action: StringName = &"ui_accept"
 
 ## The action to use to skip typing the dialogue
-@export var skip_action: StringName = &"ui_cancel"
+@export var skip_action: StringName = &"ui_accept"
+
+## The action to use to skip typing the dialogue
+@export var ignored_action: StringName = &"ui_cancel"
 
 ## A sound player for voice lines (if they exist).
 @onready var audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
@@ -87,14 +90,6 @@ func _ready() -> void:
 			assert(false, DMConstants.get_error_message(DMConstants.ERR_MISSING_RESOURCE_FOR_AUTOSTART))
 		start()
 
-	# EXAMPLE MESSAGE
-	var warning: Button = Button.new()
-	warning.text = DMConstants.translate("This is an example balloon. Create your own balloon in 'Project > Tools > Dialogue > Create Balloon...'")
-	warning.disabled = true
-	warning.set_anchors_and_offsets_preset(Control.PRESET_TOP_WIDE)
-	balloon.add_child(warning)
-	balloon.move_child(warning, 0)
-	# /EXAMPLE MESSAGE
 
 
 func _process(_delta: float) -> void:
@@ -211,7 +206,8 @@ func _on_balloon_gui_input(event: InputEvent) -> void:
 	if dialogue_line.responses.size() > 0: return
 
 	# When there are no response options the balloon itself is the clickable thing
-	get_viewport().set_input_as_handled()
+	if not event.is_action_pressed(ignored_action):
+		get_viewport().set_input_as_handled()
 
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
 		next(dialogue_line.next_id)
