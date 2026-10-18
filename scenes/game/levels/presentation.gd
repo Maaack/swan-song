@@ -19,6 +19,8 @@ var current_dialogue_balloon : Node
 @onready var animation_player = %AnimationPlayer
 
 func _load_next_scene() -> void:
+	if is_instance_valid(current_dialogue_balloon):
+		current_dialogue_balloon.queue_free()
 	level_won.emit()
 
 func _on_animation_player_animation_finished(anim_name):
