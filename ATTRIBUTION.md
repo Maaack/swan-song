@@ -8,11 +8,11 @@
 ### Static and TV Off Shader
 #### [Newman](https://newman-93.itch.io/)
 
-### Vocal Audio Montage
-#### Amythest
-
 ### Music
 #### [Orlando Shamlou](https://orlandoo.itch.io/)
+
+### Vocal Audio Montage
+#### [Amythyst](https://amythyst.itch.io/)
 
 ## Sourced
 
