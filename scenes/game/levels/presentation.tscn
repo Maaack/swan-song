@@ -13,28 +13,28 @@
 [ext_resource type="Texture2D" uid="uid://n6fjpyuhydsc" path="res://assets/icons/targeting.png" id="8_3awx0"]
 [ext_resource type="Texture2D" uid="uid://qbaelralacu2" path="res://assets/icons/sound-waves.png" id="9_7c2m3"]
 [ext_resource type="Texture2D" uid="uid://drwf1krik88kr" path="res://assets/icons/teacher.png" id="9_tolrj"]
-[ext_resource type="Texture2D" uid="uid://dl41trqw4l4be" path="res://assets/icons/team-downgrade.png" id="10_6rc56"]
 [ext_resource type="Texture2D" uid="uid://drovugbnplbx3" path="res://assets/icons/thermometer-hot.png" id="10_fh6ri"]
 [ext_resource type="Texture2D" uid="uid://cvaeccyrkqk7u" path="res://assets/icons/waterfall.png" id="11_ejca1"]
 [ext_resource type="Texture2D" uid="uid://badugxvu0xub0" path="res://assets/icons/double-ringed-orb.png" id="12_3awx0"]
+[ext_resource type="Texture2D" uid="uid://cl1bx8jiaf01o" path="res://assets/icons/h2o.png" id="12_5g7nb"]
 [ext_resource type="Texture2D" uid="uid://d0ntr0snqh5no" path="res://assets/icons/jupiter.png" id="13_0jxkl"]
-[ext_resource type="Texture2D" uid="uid://bn5mkorgmoff8" path="res://assets/icons/molecule.png" id="13_gbijr"]
 [ext_resource type="Texture2D" uid="uid://dsag5slx8qyve" path="res://assets/icons/sprout.png" id="14_l232f"]
 [ext_resource type="Texture2D" uid="uid://l8q47c65s3y3" path="res://assets/icons/thermometer-cold.png" id="15_0jxkl"]
 [ext_resource type="Texture2D" uid="uid://dmlihgwu4i3n1" path="res://assets/icons/volcano.png" id="16_v453v"]
 [ext_resource type="Texture2D" uid="uid://b3j7t1xh2cmtd" path="res://assets/icons/boot-kick.png" id="17_5g7nb"]
 [ext_resource type="Texture2D" uid="uid://81djuqx2xec1" path="res://assets/icons/sight-disabled.png" id="17_6di4v"]
 [ext_resource type="Texture2D" uid="uid://bu0djygqr81c6" path="res://assets/icons/orbital.png" id="18_ci44j"]
-[ext_resource type="Texture2D" uid="uid://d0ub5xbd32nix" path="res://assets/icons/frontal-lobe.png" id="18_f71nu"]
 [ext_resource type="Texture2D" uid="uid://df3r0vloi50q6" path="res://assets/icons/omega.png" id="19_ea785"]
 [ext_resource type="Texture2D" uid="uid://h11k5nwgvmj0" path="res://assets/icons/skull-crossed-bones.png" id="20_7c2m3"]
 [ext_resource type="Texture2D" uid="uid://b2cad2b2mwssl" path="res://assets/icons/alien-stare.png" id="21_858xu"]
+[ext_resource type="Texture2D" uid="uid://cwk1o8x2j26c0" path="res://assets/icons/brain.png" id="22_5g7nb"]
 [ext_resource type="Texture2D" uid="uid://cnoa7ru6lwhio" path="res://assets/icons/magnifying-glass.png" id="22_srd3a"]
 [ext_resource type="Texture2D" uid="uid://qlpdj56gqvi0" path="res://assets/icons/processor.png" id="23_6di4v"]
 [ext_resource type="Texture2D" uid="uid://bhb283b38fgme" path="res://assets/icons/organigram.png" id="25_r04lr"]
 [ext_resource type="Texture2D" uid="uid://daq1qyn6dy313" path="res://assets/icons/notebook.png" id="27_hseu7"]
 [ext_resource type="Texture2D" uid="uid://ciij3s2bk0yk7" path="res://assets/icons/stopwatch.png" id="28_7c2m3"]
 [ext_resource type="Texture2D" uid="uid://c1fbg1wsm78u7" path="res://assets/icons/diagram.png" id="29_7c2m3"]
+[ext_resource type="Texture2D" uid="uid://ea5gwqmm54oj" path="res://assets/icons/team-upgrade.png" id="31_5g7nb"]
 
 [sub_resource type="Animation" id="Animation_x36u0"]
 length = 0.001
@@ -1596,14 +1596,14 @@ stretch_mode = 3
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("11_ejca1")
+texture = ExtResource("12_5g7nb")
 stretch_mode = 3
 
 [node name="TextureRect3" type="TextureRect" parent="MarginContainer/StoryContainer3" unique_id=1682175414]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("13_gbijr")
+texture = ExtResource("11_ejca1")
 stretch_mode = 3
 
 [node name="TextureRect4" type="TextureRect" parent="MarginContainer/StoryContainer3" unique_id=118661530]
@@ -1635,14 +1635,14 @@ stretch_mode = 3
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("17_5g7nb")
+texture = ExtResource("18_ci44j")
 stretch_mode = 3
 
 [node name="TextureRect4" type="TextureRect" parent="MarginContainer/StoryContainer3_5" unique_id=107161845]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("18_ci44j")
+texture = ExtResource("17_5g7nb")
 stretch_mode = 3
 
 [node name="TextureRect5" type="TextureRect" parent="MarginContainer/StoryContainer3_5" unique_id=1782279877]
@@ -1678,7 +1678,7 @@ layout_mode = 2
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("18_f71nu")
+texture = ExtResource("22_5g7nb")
 stretch_mode = 3
 
 [node name="TextureRect4" type="TextureRect" parent="MarginContainer/StoryContainer5" unique_id=245035015]
@@ -1824,7 +1824,7 @@ stretch_mode = 3
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("10_6rc56")
+texture = ExtResource("31_5g7nb")
 stretch_mode = 3
 
 [node name="TextureRect3" type="TextureRect" parent="MarginContainer/StoryContainer7" unique_id=1455971084]
