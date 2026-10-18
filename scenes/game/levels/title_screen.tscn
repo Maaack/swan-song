@@ -105,6 +105,18 @@ tracks/5/keys = {
 "update": 0,
 "values": [Vector2(-3, 0)]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CenterContainer/Label:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_v1bup"]
 resource_name = "opening"
@@ -182,6 +194,18 @@ tracks/5/keys = {
 "update": 0,
 "values": [Vector2(-3, 0), Vector2(-9, 0)]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CenterContainer/Label:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat64Array(0, 0.6),
+"transitions": PackedFloat64Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lehe1"]
 _data = {
@@ -207,6 +231,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Label" type="Label" parent="CenterContainer" unique_id=1209216187]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 offset_transform_enabled = true
 offset_transform_scale = Vector2(0.25, 0.25)
