@@ -5,6 +5,7 @@
 [ext_resource type="Shader" uid="uid://djtbs11vmntm8" path="res://scenes/game/title_screen_static.gdshader" id="2_3t1qn"]
 [ext_resource type="Shader" uid="uid://cqgvvug0oygwp" path="res://scenes/game/chromatic.gdshader" id="2_v1bup"]
 [ext_resource type="Shader" uid="uid://ckhhelq7qd6yh" path="res://scenes/game/tv_shutdown.gdshader" id="5_lehe1"]
+[ext_resource type="AudioStream" uid="uid://do8wx8cavhe0r" path="res://assets/audio/jabber.ogg" id="6_v3jq1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1cqto"]
 shader = ExtResource("2_v1bup")
@@ -117,10 +118,22 @@ tracks/6/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
 }
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AudioStreamPlayer:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_v1bup"]
 resource_name = "opening"
-length = 8.0
+length = 12.0
 step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -129,7 +142,7 @@ tracks/0/path = NodePath("CenterContainer/Label:offset_transform_scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat64Array(0, 8),
+"times": PackedFloat64Array(0, 11),
 "transitions": PackedFloat64Array(1, 1),
 "update": 0,
 "values": [Vector2(0.75, 0.75), Vector2(1, 1)]
@@ -141,7 +154,7 @@ tracks/1/path = NodePath("StaticColorRect:material:shader_parameter/radius")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat64Array(0, 8),
+"times": PackedFloat64Array(0, 11),
 "transitions": PackedFloat64Array(1, 1),
 "update": 0,
 "values": [0.2999999932944, 0.5999999865888]
@@ -153,7 +166,7 @@ tracks/2/path = NodePath("TVOffColorRect:material:shader_parameter/progress")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat64Array(7.6, 8),
+"times": PackedFloat64Array(10.6, 11),
 "transitions": PackedFloat64Array(1, 1),
 "update": 0,
 "values": [0.0, 0.999999977648]
@@ -165,7 +178,7 @@ tracks/3/path = NodePath("ChromaticColorRect:material:shader_parameter/r_displac
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat64Array(5.6, 7.6),
+"times": PackedFloat64Array(8.6, 10.6),
 "transitions": PackedFloat64Array(1, 1),
 "update": 0,
 "values": [Vector2(3, 0), Vector2(9, 0)]
@@ -177,7 +190,7 @@ tracks/4/path = NodePath("ChromaticColorRect:material:shader_parameter/g_displac
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat64Array(5.6, 7.6),
+"times": PackedFloat64Array(8.6, 10.6),
 "transitions": PackedFloat64Array(1, 1),
 "update": 0,
 "values": [Vector2(0, 3), Vector2(0, 9)]
@@ -189,7 +202,7 @@ tracks/5/path = NodePath("ChromaticColorRect:material:shader_parameter/b_displac
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat64Array(5.6, 7.6),
+"times": PackedFloat64Array(8.6, 10.6),
 "transitions": PackedFloat64Array(1, 1),
 "update": 0,
 "values": [Vector2(-3, 0), Vector2(-9, 0)]
@@ -205,6 +218,18 @@ tracks/6/keys = {
 "transitions": PackedFloat64Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AudioStreamPlayer:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lehe1"]
@@ -273,5 +298,9 @@ grow_vertical = 2
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=689677881]
 libraries/ = SubResource("AnimationLibrary_lehe1")
 autoplay = &"opening"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=370890398]
+stream = ExtResource("6_v3jq1")
+bus = &"SFX"
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
