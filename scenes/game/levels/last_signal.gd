@@ -4,8 +4,7 @@ var dialogues : Array[StringName]= [
 	&'start',
 	&'part_1',
 	&'part_2',
-	&'part_3',
-	&'last',
+	&'end',
 ]
 
 var current_dialogue_iter : int = -1

@@ -2,3 +2,46 @@
 Manager: So here is the new tool. Something I put together.
 Manager: It's limited on power, but if we get promising results, I can dedicate more compute from the server farm.
 => END
+
+~ part_1
+Manager: Yes, that looks like it could be something!
+Manager: I've boosted the processing power by 20x! Let's see what we can get with that.
+=> END
+
+~ part_2
+Manager: Yes, it's starting to take shape!
+Manager: What do you think it is?
+- Their leader.
+	Manager: That could be! I wonder if it's the leader of their team, their nation, or the whole planet?
+- Their god.
+	Manager: Hmmm... I suppose even scientifically minded people turn to religion in times of peril.
+- Their idol.
+	Manager: Like someone famous that they want to be remembered? Fascinating...
+- A schematic.
+	Manager: Yeah! Maybe they found how to bend space-time to make a portal, and they need us to build the other end!
+Manager: In any case, I've boosted the processing power by 10x. That should be enough to resolve the final image!
+=> END
+
+~ end
+Manager: What the f***?
+Manager: Homer f***ing Simpson?!
+Manager: Is this a joke?
+- What's wrong with that?
+	Manager: "What's wrong with th-" - Are you serious?!
+- It's your tool.
+	Manager: SHUT UP!
+- (Say nothing)
+	Manager: Oh no. No no no.
+Manager: Nobody is going to believe this.
+Manager: Every space agency - We're all going to look like fools!
+Manager: I have to warn the others...
+The manager storms out of the room.
+We were all under NDA's and the admins waited in silence for the next news cycle for the public to forget.
+The whole story ended up getting buried.
+Only a few of us knew the truth.
+A civilization was on the edge of extinction...
+And all they wanted to do with their dying breath...
+was to make their neighbor smile.
+...
+And I thought it was beautiful.
+=> END
