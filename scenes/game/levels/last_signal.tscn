@@ -51,7 +51,7 @@ layout_mode = 2
 
 [node name="FourierCycles" type="Node2D" parent="MarginContainer/VBoxContainer/CenterContainer/Control" unique_id=768182382]
 unique_name_in_owner = true
-position = Vector2(0, 40)
+position = Vector2(0, 80)
 script = ExtResource("3_ine82")
 time_mod = 0.30000000000000004
 enabled = true

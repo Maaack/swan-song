@@ -5,7 +5,7 @@ Manager: It's limited on power, but if we get promising results, I can dedicate 
 
 ~ part_1
 Manager: Yes, that looks like it could be something!
-Manager: I've boosted the processing power by 20x! Let's see what we can get with that.
+Manager: I've boosted the processing power by 10x! Let's see what we can get with that.
 => END
 
 ~ part_2
@@ -19,10 +19,10 @@ Manager: What do you think it is?
 	Manager: Like someone famous that they want to be remembered? Fascinating...
 - A schematic.
 	Manager: Yeah! Maybe they found how to bend space-time to make a portal, and they need us to build the other end!
-Manager: In any case, I've boosted the processing power by 10x. That should be enough to resolve the final image!
+Manager: In any case, I've boosted the processing power by 15x. That should be enough to resolve the final image!
 => END
 
-~ end
+~ ending
 Manager: What the f***?
 Manager: Homer f***ing Simpson?!
 Manager: Is this a joke?
@@ -33,15 +33,17 @@ Manager: Is this a joke?
 - (Say nothing)
 	Manager: Oh no. No no no.
 Manager: Nobody is going to believe this.
-Manager: Every space agency - We're all going to look like fools!
+Manager: Every space agency - We've been duped! We're all going to look like fools!
 Manager: I have to warn the others...
-The manager storms out of the room.
-We were all under NDA's and the admins waited in silence for the next news cycle for the public to forget.
-The whole story ended up getting buried.
+With that, the manager stormed out of the room.
+	The whole project soon came to an immediate halt.
+We were all sworn to secrecy under penalty of law.
+	The administration waited in silence for the public to forget humanity made first contact.
+	The whole story ended up getting buried by the next news cycle of war and famine.
 Only a few of us knew the truth.
 A civilization was on the edge of extinction...
-And all they wanted to do with their dying breath...
-was to make their neighbor smile.
+	And all they wanted to do with their dying breath...
+	Was to make their neighbor smile.
 ...
-And I thought it was beautiful.
+	And I thought it was beautiful.
 => END

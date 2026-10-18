@@ -43,7 +43,7 @@ func _play_next_slide() -> void:
 		current_dialogue_balloon.queue_free()
 	current_dialogue_balloon = DialogueManager.show_dialogue_balloon(dialogue_resource, current_animation_name)
 
-func _on_dialogue_ended(_dialogue_name):
+func _on_dialogue_ended(_dialogue_resource):
 	_play_next_slide()
 
 func _ready():

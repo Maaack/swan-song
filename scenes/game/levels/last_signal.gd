@@ -4,7 +4,7 @@ var dialogues : Array[StringName]= [
 	&'start',
 	&'part_1',
 	&'part_2',
-	&'end',
+	&'ending',
 ]
 
 var current_dialogue_iter : int = -1
@@ -25,7 +25,6 @@ var current_dialogue_balloon : Node
 var is_signal_processing : bool = false
 var processing_progress : float = 0.0
 
-
 func _play_next_dialogue() -> void:
 	current_dialogue_iter += 1
 	if current_dialogue_iter >= dialogues.size():
@@ -35,12 +34,24 @@ func _play_next_dialogue() -> void:
 	if is_instance_valid(current_dialogue_balloon):
 		current_dialogue_balloon.queue_free()
 	current_dialogue_balloon = DialogueManager.show_dialogue_balloon(dialogue_resource, current_dialogue_name)
+	match(current_dialogue_name):
+		"part_1":
+			base_processing_speed *= 8.0
+			data_points_h_slider.max_value *= 10
+		"part_2":
+			base_processing_speed *= 10.0
+			data_points_h_slider.max_value *= 15
+
+func _on_dialogue_ended(_dialogue_resource):
+	if current_dialogue_name == "ending":
+		level_won.emit()
 
 func _ready():
 	var fourier_x : Array[SpectrumData] = homer_simpson_transform.get_fourier_x()
 	fourier_x.sort_custom(func(a, b) : return a.amp > b.amp )
 	fourier_cycles.data = fourier_x
 	fourier_cycles.terms = 0
+	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 	_play_next_dialogue()
 
 func _on_process_button_pressed():
@@ -69,6 +80,14 @@ func _on_data_points_h_slider_value_changed(value):
 func _on_draw_speed_h_slider_value_changed(value):
 	fourier_cycles.time_mod = draw_speed_h_slider.value
 
-
 func _on_fourier_cycles_drawing_completed():
-	pass # Replace with function body.
+	match(current_dialogue_name):
+		"start":
+			if data_points_h_slider.value >= 4:
+				_play_next_dialogue()
+		"part_1":
+			if data_points_h_slider.value >= 40:
+				_play_next_dialogue()
+		"part_2":
+			if data_points_h_slider.value >= 250:
+				_play_next_dialogue()

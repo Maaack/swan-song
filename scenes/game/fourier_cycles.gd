@@ -60,5 +60,6 @@ func _process(delta):
 		return
 	if is_drawing and time > PI:
 		drawing_completed.emit()
+		is_drawing = false
 	if delta > 0.1:
 		drawing.points.clear()
