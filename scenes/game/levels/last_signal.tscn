@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://dmhlhegovgg3q" path="res://scenes/game/fourier_cycles.gd" id="3_ine82"]
 [ext_resource type="Script" uid="uid://c7o8uqqpfkbxh" path="res://scenes/game/drawing.gd" id="4_8e02v"]
 [ext_resource type="Shader" uid="uid://ckhhelq7qd6yh" path="res://scenes/game/tv_shutdown.gdshader" id="7_8e02v"]
+[ext_resource type="AudioStream" uid="uid://b2374gqtljldv" path="res://assets/audio/tvoff.ogg" id="8_vmph3"]
 
 [sub_resource type="Animation" id="Animation_vmph3"]
 length = 0.001
@@ -22,9 +23,22 @@ tracks/0/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_k27l6"]
 resource_name = "ending"
+length = 2.0
 step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -33,10 +47,22 @@ tracks/0/path = NodePath("ColorRect:material:shader_parameter/progress")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat64Array(0, 0.5),
+"times": PackedFloat64Array(0.3, 0.8),
 "transitions": PackedFloat64Array(1, 1),
 "update": 0,
 "values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_j7kv0"]
@@ -145,6 +171,31 @@ text = "1"
 alignment = 1
 editable = false
 
+[node name="Spacer3" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1517723390]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1275852682]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Radius Key: "
+
+[node name="OptionButton" type="OptionButton" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1541049979]
+unique_name_in_owner = true
+layout_mode = 2
+selected = 0
+item_count = 5
+popup/item_0/text = "Real #"
+popup/item_0/id = 0
+popup/item_1/text = "Imaginary #"
+popup/item_1/id = 1
+popup/item_2/text = "Frequency"
+popup/item_2/id = 2
+popup/item_3/text = "Amplitude"
+popup/item_3/id = 3
+popup/item_4/text = "Phase"
+popup/item_4/id = 4
+
 [node name="VSeparator" type="VSeparator" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1983485401]
 layout_mode = 2
 theme_override_constants/separation = 64
@@ -195,6 +246,10 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 0)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=991546834]
+stream = ExtResource("8_vmph3")
+volume_db = -10.0
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="drawing_completed" from="MarginContainer/VBoxContainer/CenterContainer/Control/FourierCycles" to="." method="_on_fourier_cycles_drawing_completed"]

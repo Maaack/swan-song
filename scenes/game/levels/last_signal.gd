@@ -22,6 +22,7 @@ var current_dialogue_balloon : Node
 @onready var data_points_h_slider = %DataPointsHSlider
 @onready var draw_speed_h_slider = %DrawSpeedHSlider
 @onready var animation_player = %AnimationPlayer
+@onready var option_button = %OptionButton
 
 var is_signal_processing : bool = false
 var processing_progress : float = 0.0
@@ -48,10 +49,9 @@ func _on_dialogue_ended(_dialogue_resource):
 		animation_player.play(&"ending")
 
 func _ready():
-	var fourier_x : Array[SpectrumData] = homer_simpson_transform.get_fourier_x()
-	fourier_x.sort_custom(func(a, b) : return a.amp > b.amp )
+	var fourier_x :Array[SpectrumData] = homer_simpson_transform.get_fourier_x()
 	fourier_cycles.data = fourier_x
-	fourier_cycles.terms = 0
+	fourier_cycles.terms = 1
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 	_play_next_dialogue()
 
@@ -61,6 +61,7 @@ func _on_process_button_pressed():
 	data_points_h_slider.editable = not is_signal_processing
 
 func _process_data_points(value:int) -> void:
+	fourier_cycles.radius_mode = option_button.selected
 	fourier_cycles.terms = value
 
 func _process(delta):
@@ -84,13 +85,13 @@ func _on_draw_speed_h_slider_value_changed(value):
 func _on_fourier_cycles_drawing_completed():
 	match(current_dialogue_name):
 		"start":
-			if data_points_h_slider.value >= 4:
+			if data_points_h_slider.value >= 4 and option_button.selected == 3:
 				_play_next_dialogue()
 		"part_1":
-			if data_points_h_slider.value >= 40:
+			if data_points_h_slider.value >= 40 and option_button.selected == 3:
 				_play_next_dialogue()
 		"part_2":
-			if data_points_h_slider.value >= 250:
+			if data_points_h_slider.value >= 250 and option_button.selected == 3:
 				_play_next_dialogue()
 
 func _on_animation_player_animation_finished(anim_name):

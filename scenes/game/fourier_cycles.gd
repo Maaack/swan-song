@@ -28,6 +28,20 @@ signal drawing_completed
 	set(value):
 		enabled = value
 		time = -PI
+@export var radius_mode : int = 0 :
+	set(value):
+		radius_mode = value
+		match(radius_mode):
+			0:
+				data.sort_custom(func(a, b) : return a.re > b.re )
+			1:
+				data.sort_custom(func(a, b) : return a.im > b.im )
+			2:
+				data.sort_custom(func(a, b) : return a.freq > b.freq )
+			3:
+				data.sort_custom(func(a, b) : return a.amp > b.amp )
+			3:
+				data.sort_custom(func(a, b) : return a.phase > b.phase )
 
 var is_drawing : bool = true
 
@@ -36,13 +50,24 @@ func _draw():
 	var y := 0.0
 	var data_max = min(data.size(), terms)
 	for i in range(0, data_max):
-		var prevx = x;
-		var prevy = y;
-		var freq = data[i].freq;
-		var radius = data[i].amp;
-		var phase = data[i].phase;
-		x += radius * cos(freq * time + phase + rotation);
-		y += radius * sin(freq * time + phase + rotation);
+		var prevx = x
+		var prevy = y
+		var freq = data[i].freq
+		var radius:float = 0
+		match(radius_mode):
+			0:
+				radius = data[i].re
+			1:
+				radius = data[i].im
+			2:
+				radius = data[i].freq * 0.1
+			3:
+				radius = data[i].amp
+			4:
+				radius = data[i].phase
+		var phase = data[i].phase
+		x += radius * cos(freq * time + phase + rotation)
+		y += radius * sin(freq * time + phase + rotation)
 
 		# draw vector and circles
 		draw_circle(Vector2(prevx, prevy), radius, Color(Color.BLUE_VIOLET, 0.5), false, 2)
