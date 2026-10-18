@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bsprcq4b8w51e"]
 
 [ext_resource type="Script" uid="uid://b0agq5arshv4j" path="res://scenes/game/homer_simpson_transform.gd" id="1_oupe0"]
+[ext_resource type="Script" uid="uid://ev5r3dnxjb78" path="res://scenes/game/levels/last_signal.gd" id="1_we28g"]
 [ext_resource type="Script" uid="uid://2vp2njihlfek" path="res://resources/dataset/homer_drawing.gd" id="2_we28g"]
 [ext_resource type="Script" uid="uid://dmhlhegovgg3q" path="res://scenes/game/fourier_cycles.gd" id="3_ine82"]
 [ext_resource type="Script" uid="uid://c7o8uqqpfkbxh" path="res://scenes/game/drawing.gd" id="4_8e02v"]
@@ -12,10 +13,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_we28g")
 
 [node name="HomerSimpsonTransform" type="Node" parent="." unique_id=1806787966]
+unique_name_in_owner = true
 script = ExtResource("1_oupe0")
-terms = 5
 scale = 50.0
 
 [node name="Dataset" type="Node" parent="HomerSimpsonTransform" unique_id=336046175]

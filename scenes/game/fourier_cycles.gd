@@ -5,7 +5,8 @@ extends Node2D
 		data = value
 		time = -PI
 		queue_redraw()
-		drawing.queue_redraw()
+		if is_inside_tree():
+			drawing.queue_redraw()
 @export_range(-PI, PI, 0.00001) var time: float = 0:
 	set(value):
 		time = value
