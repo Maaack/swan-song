@@ -2,6 +2,7 @@ extends "./level.gd"
 
 @export var dialogue_resource : DialogueResource
 @export var graph_scale:float = 1.0
+@export var base_processing_speed:float = 1.0
 @onready var time_graph = %TimeGraph
 @onready var cycle_graph = %CycleGraph
 @onready var cycle_series_input = %CycleSeriesInput
@@ -9,6 +10,11 @@ extends "./level.gd"
 @onready var signal_splits = %SignalSplits
 @onready var result_text = %ResultText
 @onready var original_time_graph = %OriginalTimeGraph
+@onready var process_button = %ProcessButton
+@onready var progress_bar = %ProgressBar
+
+var is_signal_processing : bool = false
+var processing_progress : float = 0.0
 
 func parse_time_series(input:String) -> PackedFloat64Array:
 	return input.split_floats(" ", false)
@@ -64,7 +70,7 @@ func _on_parts_check_box_toggled(toggled_on):
 	time_graph.show_parts = toggled_on
 	cycle_graph.show_combined = toggled_on
 
-func _on_signal_splits_value_changed(value):
+func _parse_and_process_signal_parts(value:int):
 	var cycle_series = original_time_graph.cycle_series
 	var cycle_series_size = cycle_series.size()
 	var text = ""
@@ -81,3 +87,22 @@ func _on_continue_button_pressed():
 
 func _ready():
 	_process_original_time_series("2 3 5 7 11 13 17 19 23")
+
+
+func _on_process_button_pressed():
+	is_signal_processing = true
+	process_button.disabled = is_signal_processing
+	signal_splits.editable = not is_signal_processing
+	
+
+func _process(delta):
+	if not is_signal_processing: return
+	var signal_parts : int = signal_splits.value
+	processing_progress += delta * base_processing_speed / float(signal_parts)
+	progress_bar.value = processing_progress
+	if processing_progress >= 1.0:
+		_parse_and_process_signal_parts(signal_parts)
+		is_signal_processing = false
+		process_button.disabled = is_signal_processing
+		signal_splits.editable = not is_signal_processing
+		processing_progress = 0.0
