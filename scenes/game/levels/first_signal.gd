@@ -3,6 +3,7 @@ extends "./level.gd"
 @export var dialogue_resource : DialogueResource
 @export var graph_scale:float = 1.0
 @export var base_processing_speed:float = 1.0
+
 @onready var time_graph = %TimeGraph
 @onready var cycle_graph = %CycleGraph
 @onready var cycle_series_input = %CycleSeriesInput

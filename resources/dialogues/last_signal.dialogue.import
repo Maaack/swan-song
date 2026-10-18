@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://ciserf1kfeh02"
+path="res://.godot/imported/last_signal.dialogue-d821b34a3c74679ceff5a56709b235e1.tres"
+
+[deps]
+
+source_file="res://resources/dialogues/last_signal.dialogue"
+dest_files=["res://.godot/imported/last_signal.dialogue-d821b34a3c74679ceff5a56709b235e1.tres"]
+
+[params]
+
+defaults=true

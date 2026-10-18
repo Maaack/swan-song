@@ -1,10 +1,75 @@
-extends Control
+extends "./level.gd"
+
+var dialogues : Array[StringName]= [
+	&'start',
+	&'part_1',
+	&'part_2',
+	&'part_3',
+	&'last',
+]
+
+var current_dialogue_iter : int = -1
+var current_dialogue_name : String = ""
+var current_dialogue_balloon : Node
+
+@export var dialogue_resource : DialogueResource
+@export var base_processing_speed:float = 1.0
 
 @onready var homer_simpson_transform = %HomerSimpsonTransform
 @onready var fourier_cycles = %FourierCycles
+@onready var data_points_text = %DataPointsText
+@onready var process_button = %ProcessButton
+@onready var progress_bar = %ProgressBar
+@onready var data_points_h_slider = %DataPointsHSlider
+@onready var draw_speed_h_slider = %DrawSpeedHSlider
 
-# Called when the node enters the scene tree for the first time.
+var is_signal_processing : bool = false
+var processing_progress : float = 0.0
+
+
+func _play_next_dialogue() -> void:
+	current_dialogue_iter += 1
+	if current_dialogue_iter >= dialogues.size():
+		level_won.emit()
+		return
+	current_dialogue_name = dialogues[current_dialogue_iter]
+	if is_instance_valid(current_dialogue_balloon):
+		current_dialogue_balloon.queue_free()
+	current_dialogue_balloon = DialogueManager.show_dialogue_balloon(dialogue_resource, current_dialogue_name)
+
 func _ready():
 	var fourier_x : Array[SpectrumData] = homer_simpson_transform.get_fourier_x()
 	fourier_x.sort_custom(func(a, b) : return a.amp > b.amp )
 	fourier_cycles.data = fourier_x
+	fourier_cycles.terms = 0
+	_play_next_dialogue()
+
+func _on_process_button_pressed():
+	is_signal_processing = true
+	process_button.disabled = is_signal_processing
+	data_points_h_slider.editable = not is_signal_processing
+
+func _process_data_points(value:int) -> void:
+	fourier_cycles.terms = value
+
+func _process(delta):
+	if not is_signal_processing: return
+	var signal_parts : int = data_points_h_slider.value
+	processing_progress += delta * base_processing_speed / float(signal_parts)
+	progress_bar.value = processing_progress
+	if processing_progress >= 1.0:
+		_process_data_points(signal_parts)
+		is_signal_processing = false
+		process_button.disabled = is_signal_processing
+		data_points_h_slider.editable = not is_signal_processing
+		processing_progress = 0.0
+
+func _on_data_points_h_slider_value_changed(value):
+	data_points_text.text = "%d" % value
+
+func _on_draw_speed_h_slider_value_changed(value):
+	fourier_cycles.time_mod = draw_speed_h_slider.value
+
+
+func _on_fourier_cycles_drawing_completed():
+	pass # Replace with function body.

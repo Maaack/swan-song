@@ -151,8 +151,8 @@ value = 1.0
 alignment = 1
 
 [node name="VSeparator" type="VSeparator" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=962551846]
-custom_minimum_size = Vector2(32, 0)
 layout_mode = 2
+theme_override_constants/separation = 32
 
 [node name="ProcessButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1946319387]
 unique_name_in_owner = true
@@ -182,7 +182,7 @@ text = "Signal Data: "
 
 [node name="ResultText" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainer4" unique_id=1618796923]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(480, 32)
+custom_minimum_size = Vector2(528, 32)
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 24

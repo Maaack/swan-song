@@ -1,5 +1,7 @@
 extends Node2D
 
+signal drawing_completed
+
 @export var data: Array = [] :
 	set(value):
 		data = value
@@ -7,11 +9,12 @@ extends Node2D
 		queue_redraw()
 		if is_inside_tree():
 			drawing.queue_redraw()
+			is_drawing = true
 @export_range(-PI, PI, 0.00001) var time: float = 0:
 	set(value):
 		time = value
 		queue_redraw()
-@export_range(0.1, 10) var time_mod: float = 1
+@export_range(0.1, 10) var time_mod: float = 1.0
 @export_range(0, 1000, 1.0) var terms: int = 1 :
 	set(value):
 		terms = value
@@ -19,11 +22,14 @@ extends Node2D
 		queue_redraw()
 		if is_inside_tree():
 			drawing.points.clear()
+			is_drawing = true
 @onready var drawing = %Drawing
 @export var enabled : bool = false :
 	set(value):
 		enabled = value
 		time = -PI
+
+var is_drawing : bool = true
 
 func _draw():
 	var x := 0.0
@@ -49,8 +55,10 @@ func _draw():
 	drawing.queue_redraw()
 
 func _process(delta):
+	time += delta * time_mod
 	if not enabled:
 		return
+	if is_drawing and time > PI:
+		drawing_completed.emit()
 	if delta > 0.1:
 		drawing.points.clear()
-	time += delta * time_mod
