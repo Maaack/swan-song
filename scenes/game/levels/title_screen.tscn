@@ -5,32 +5,17 @@
 [ext_resource type="Shader" uid="uid://djtbs11vmntm8" path="res://scenes/game/title_screen_static.gdshader" id="2_3t1qn"]
 [ext_resource type="Shader" uid="uid://cqgvvug0oygwp" path="res://scenes/game/chromatic.gdshader" id="2_v1bup"]
 [ext_resource type="Shader" uid="uid://ckhhelq7qd6yh" path="res://scenes/game/tv_shutdown.gdshader" id="5_lehe1"]
+[ext_resource type="Texture2D" uid="uid://bo2hglqv36q7" path="res://assets/icons/satellite-big.png" id="6_nt0oy"]
 [ext_resource type="AudioStream" uid="uid://do8wx8cavhe0r" path="res://assets/audio/jabber.ogg" id="6_v3jq1"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_1cqto"]
-shader = ExtResource("2_v1bup")
-shader_parameter/r_displacement = Vector2(3, 0)
-shader_parameter/g_displacement = Vector2(0, 3)
-shader_parameter/b_displacement = Vector2(-3, 0)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_0gu67"]
-shader = ExtResource("2_3t1qn")
-shader_parameter/stretch = Vector2(0.75, 1.5)
-shader_parameter/radius = 0.0
-shader_parameter/brightness = 0.6999999843536
-shader_parameter/density = 0.0999999977648
-shader_parameter/opacity = 0.3499999921768
-shader_parameter/static_color = Color(1, 1, 1, 1)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_idahx"]
-shader = ExtResource("5_lehe1")
-shader_parameter/speed = 1.0
-shader_parameter/progress = 0.0
-shader_parameter/smoothness = 0.1
-shader_parameter/flash_radius = 0.15
-shader_parameter/flash_color = Color(1, 1, 1, 1)
-shader_parameter/off_color = Color(0, 0, 0, 1)
-shader_parameter/monitor_filter = false
+[ext_resource type="Texture2D" uid="uid://cksg3mqc5aph5" path="res://assets/icons/earth-africa-europe-big.png" id="7_81f1r"]
+[ext_resource type="Texture2D" uid="uid://crgre1q81se3e" path="res://assets/icons/radar-dish-big.png" id="8_yptnb"]
+[ext_resource type="Texture2D" uid="uid://lp4btrl7162y" path="res://assets/icons/sound-waves-big.png" id="9_x1utt"]
+[ext_resource type="Texture2D" uid="uid://fnhc8t7bqlvf" path="res://assets/icons/distress-signal-big.png" id="10_mgn65"]
+[ext_resource type="Texture2D" uid="uid://5bax56kxln4v" path="res://assets/icons/jupiter-big.png" id="11_rhof2"]
+[ext_resource type="Texture2D" uid="uid://d12yudrtcvpwj" path="res://assets/icons/orbital-big.png" id="12_70om0"]
+[ext_resource type="Texture2D" uid="uid://cok20e5mhig2k" path="res://assets/icons/alien-stare-big.png" id="13_vlotl"]
+[ext_resource type="Texture2D" uid="uid://cnwjoe3fchkx6" path="res://assets/icons/swan-big.png" id="14_8gx0b"]
+[ext_resource type="Texture2D" uid="uid://c41y81bcvudk2" path="res://assets/icons/double-quaver-big.png" id="15_al5xl"]
 
 [sub_resource type="Animation" id="Animation_idahx"]
 length = 0.001
@@ -130,10 +115,58 @@ tracks/7/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CenterContainer/TextureRect:texture")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 1,
+"values": [null]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("CenterContainer/TextureRect:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("CenterContainer/TextureRect:offset_transform_scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 0,
+"values": [Vector2(0.5, 0.5)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 0,
+"values": [-20.0]
+}
 
 [sub_resource type="Animation" id="Animation_v1bup"]
 resource_name = "opening"
-length = 12.0
+length = 14.0
 step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -142,7 +175,7 @@ tracks/0/path = NodePath("CenterContainer/Label:offset_transform_scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat64Array(0, 11),
+"times": PackedFloat64Array(4.5, 11),
 "transitions": PackedFloat64Array(1, 1),
 "update": 0,
 "values": [Vector2(0.75, 0.75), Vector2(1, 1)]
@@ -214,7 +247,7 @@ tracks/6/path = NodePath("CenterContainer/Label:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat64Array(0, 0.6),
+"times": PackedFloat64Array(4.5, 5.3999996),
 "transitions": PackedFloat64Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -226,10 +259,58 @@ tracks/7/path = NodePath("AudioStreamPlayer:playing")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat64Array(0),
-"transitions": PackedFloat64Array(1),
+"times": PackedFloat64Array(0, 0.1),
+"transitions": PackedFloat64Array(1, 1),
 "update": 1,
-"values": [true]
+"values": [false, true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CenterContainer/TextureRect:texture")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat64Array(0, 0.1, 0.20000002, 0.29999998, 0.4, 0.49999997, 0.59999996, 0.6999999, 0.79999995, 0.9, 1, 1.0999999, 1.2, 1.3, 1.4, 1.5, 1.5999999, 1.6999999, 1.8, 1.8999999, 1.9999999, 2.1, 2.2000003, 2.3000002, 2.4, 2.5, 2.6000001, 2.7, 2.8, 2.8999999, 3.0000002, 3.1000001, 3.2, 3.3000002, 3.4, 3.5, 3.7, 4, 4.3, 4.6, 5.6000004, 5.7, 5.8, 5.9000006),
+"transitions": PackedFloat64Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [null, ExtResource("6_nt0oy"), ExtResource("7_81f1r"), ExtResource("8_yptnb"), ExtResource("9_x1utt"), ExtResource("10_mgn65"), ExtResource("11_rhof2"), ExtResource("12_70om0"), ExtResource("13_vlotl"), ExtResource("6_nt0oy"), ExtResource("7_81f1r"), ExtResource("8_yptnb"), ExtResource("9_x1utt"), ExtResource("10_mgn65"), ExtResource("11_rhof2"), ExtResource("12_70om0"), ExtResource("13_vlotl"), ExtResource("6_nt0oy"), ExtResource("7_81f1r"), ExtResource("8_yptnb"), ExtResource("9_x1utt"), ExtResource("10_mgn65"), ExtResource("11_rhof2"), ExtResource("12_70om0"), ExtResource("13_vlotl"), ExtResource("6_nt0oy"), ExtResource("7_81f1r"), ExtResource("8_yptnb"), ExtResource("9_x1utt"), ExtResource("10_mgn65"), ExtResource("11_rhof2"), ExtResource("12_70om0"), ExtResource("13_vlotl"), ExtResource("14_8gx0b"), ExtResource("15_al5xl"), ExtResource("14_8gx0b"), ExtResource("15_al5xl"), ExtResource("14_8gx0b"), ExtResource("15_al5xl"), ExtResource("14_8gx0b"), ExtResource("15_al5xl"), ExtResource("14_8gx0b"), ExtResource("15_al5xl"), null]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("CenterContainer/TextureRect:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat64Array(0, 1, 3.5, 4.6),
+"transitions": PackedFloat64Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("CenterContainer/TextureRect:offset_transform_scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat64Array(0, 4),
+"transitions": PackedFloat64Array(1, 1),
+"update": 0,
+"values": [Vector2(0.5, 0.5), Vector2(1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("AudioStreamPlayer:volume_db")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat64Array(0, 1.03),
+"transitions": PackedFloat64Array(1, 1),
+"update": 0,
+"values": [-30.0, 0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lehe1"]
@@ -237,6 +318,31 @@ _data = {
 &"RESET": SubResource("Animation_idahx"),
 &"opening": SubResource("Animation_v1bup")
 }
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1cqto"]
+shader = ExtResource("2_v1bup")
+shader_parameter/r_displacement = Vector2(3, 0)
+shader_parameter/g_displacement = Vector2(0, 3)
+shader_parameter/b_displacement = Vector2(-3, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0gu67"]
+shader = ExtResource("2_3t1qn")
+shader_parameter/stretch = Vector2(0.75, 1.5)
+shader_parameter/radius = 0.0
+shader_parameter/brightness = 0.6999999843536
+shader_parameter/density = 0.0999999977648
+shader_parameter/opacity = 0.3499999921768
+shader_parameter/static_color = Color(1, 1, 1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_idahx"]
+shader = ExtResource("5_lehe1")
+shader_parameter/speed = 1.0
+shader_parameter/progress = 0.0
+shader_parameter/smoothness = 0.1
+shader_parameter/flash_radius = 0.15
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/off_color = Color(0, 0, 0, 1)
+shader_parameter/monitor_filter = false
 
 [node name="TitleScreen" type="Control" unique_id=1162308374]
 layout_mode = 3
@@ -247,6 +353,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_lehe1")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=689677881]
+libraries/ = SubResource("AnimationLibrary_lehe1")
+autoplay = &"opening"
+
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=2097354515]
 layout_mode = 1
 anchors_preset = 15
@@ -254,6 +364,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer" unique_id=998552059]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+offset_transform_enabled = true
+offset_transform_scale = Vector2(0.5, 0.5)
 
 [node name="Label" type="Label" parent="CenterContainer" unique_id=1209216187]
 modulate = Color(1, 1, 1, 0)
@@ -295,12 +411,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=689677881]
-libraries/ = SubResource("AnimationLibrary_lehe1")
-autoplay = &"opening"
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=370890398]
 stream = ExtResource("6_v3jq1")
+volume_db = -20.0
 bus = &"SFX"
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
