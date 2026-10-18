@@ -193,6 +193,9 @@ func _on_mutated(mutation: Dictionary) -> void:
 
 
 func _on_balloon_gui_input(event: InputEvent) -> void:
+	if event.is_action_pressed(ignored_action):
+		queue_free()
+		return
 	# See if we need to skip typing of the dialogue
 	var skip_button_was_pressed: bool = event.is_action_pressed(skip_action)
 	if dialogue_label.is_typing:
@@ -206,8 +209,7 @@ func _on_balloon_gui_input(event: InputEvent) -> void:
 	if dialogue_line.responses.size() > 0: return
 
 	# When there are no response options the balloon itself is the clickable thing
-	if not event.is_action_pressed(ignored_action):
-		get_viewport().set_input_as_handled()
+	get_viewport().set_input_as_handled()
 
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
 		next(dialogue_line.next_id)

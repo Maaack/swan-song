@@ -259,10 +259,10 @@ tracks/8/path = NodePath("CenterContainer/TextureRect:texture")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat64Array(0, 0.1, 0.20000002, 0.29999998, 0.4, 0.49999997, 0.59999996, 0.6999999, 0.79999995, 0.9, 1, 1.0999999, 1.2, 1.3, 1.4, 1.5, 1.5999999, 1.6999999, 1.8, 1.8999999, 1.9999999, 2.1, 2.2000003, 2.3000002, 2.4, 2.5, 2.6000001, 2.7, 2.8, 2.8999999, 3.0000002, 3.1000001, 3.2, 3.3000002, 3.4, 3.5, 3.7, 4, 4.3, 4.6, 5.6000004, 5.7, 5.8, 5.9000006),
-"transitions": PackedFloat64Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat64Array(0, 0.1, 0.20000002, 0.29999998, 0.4, 0.49999997, 0.59999996, 0.6999999, 0.79999995, 0.9, 1, 1.0999999, 1.2, 1.3, 1.4, 1.5, 1.5999999, 1.6999999, 1.8, 1.8999999, 1.9999999, 2.1, 2.2000003, 2.3000002, 2.4, 2.5, 2.6000001, 2.7, 2.8, 2.8999999, 3.0000002, 3.1000001, 3.2, 3.3000002, 3.4, 3.5, 3.7, 4, 4.3, 4.6, 4.9),
+"transitions": PackedFloat64Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [null, ExtResource("6_nt0oy"), ExtResource("7_81f1r"), ExtResource("8_yptnb"), ExtResource("9_x1utt"), ExtResource("10_mgn65"), ExtResource("11_rhof2"), ExtResource("12_70om0"), ExtResource("13_vlotl"), ExtResource("6_nt0oy"), ExtResource("7_81f1r"), ExtResource("8_yptnb"), ExtResource("9_x1utt"), ExtResource("10_mgn65"), ExtResource("11_rhof2"), ExtResource("12_70om0"), ExtResource("13_vlotl"), ExtResource("6_nt0oy"), ExtResource("7_81f1r"), ExtResource("8_yptnb"), ExtResource("9_x1utt"), ExtResource("10_mgn65"), ExtResource("11_rhof2"), ExtResource("12_70om0"), ExtResource("13_vlotl"), ExtResource("6_nt0oy"), ExtResource("7_81f1r"), ExtResource("8_yptnb"), ExtResource("9_x1utt"), ExtResource("10_mgn65"), ExtResource("11_rhof2"), ExtResource("12_70om0"), ExtResource("13_vlotl"), ExtResource("14_8gx0b"), ExtResource("15_al5xl"), ExtResource("14_8gx0b"), ExtResource("15_al5xl"), ExtResource("14_8gx0b"), ExtResource("15_al5xl"), ExtResource("14_8gx0b"), ExtResource("15_al5xl"), ExtResource("14_8gx0b"), ExtResource("15_al5xl"), null]
+"values": [null, ExtResource("6_nt0oy"), ExtResource("7_81f1r"), ExtResource("8_yptnb"), ExtResource("9_x1utt"), ExtResource("10_mgn65"), ExtResource("11_rhof2"), ExtResource("12_70om0"), ExtResource("13_vlotl"), ExtResource("6_nt0oy"), ExtResource("7_81f1r"), ExtResource("8_yptnb"), ExtResource("9_x1utt"), ExtResource("10_mgn65"), ExtResource("11_rhof2"), ExtResource("12_70om0"), ExtResource("13_vlotl"), ExtResource("6_nt0oy"), ExtResource("7_81f1r"), ExtResource("8_yptnb"), ExtResource("9_x1utt"), ExtResource("10_mgn65"), ExtResource("11_rhof2"), ExtResource("12_70om0"), ExtResource("13_vlotl"), ExtResource("6_nt0oy"), ExtResource("7_81f1r"), ExtResource("8_yptnb"), ExtResource("9_x1utt"), ExtResource("10_mgn65"), ExtResource("11_rhof2"), ExtResource("12_70om0"), ExtResource("13_vlotl"), ExtResource("14_8gx0b"), ExtResource("15_al5xl"), ExtResource("14_8gx0b"), ExtResource("15_al5xl"), ExtResource("14_8gx0b"), ExtResource("15_al5xl"), ExtResource("14_8gx0b"), null]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
@@ -389,6 +389,7 @@ grow_vertical = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=370890398]
 stream = ExtResource("16_nt0oy")
+volume_db = -10.0
 bus = &"SFX"
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
