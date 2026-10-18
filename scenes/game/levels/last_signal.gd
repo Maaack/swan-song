@@ -56,7 +56,8 @@ func _on_dialogue_ended(_dialogue_resource):
 func _ready():
 	var fourier_x :Array[SpectrumData] = homer_simpson_transform.get_fourier_x()
 	fourier_cycles.data = fourier_x
-	fourier_cycles.terms = 1
+	processing_data_points = 1
+	_process_data_points()
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 	_play_next_dialogue()
 
