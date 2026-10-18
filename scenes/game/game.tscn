@@ -24,6 +24,10 @@ parameters/looping = true
 [node name="GameTimer" type="Node" parent="." unique_id=116840261]
 script = ExtResource("1_4j704")
 
+[node name="PauseMenuController" type="Node" parent="." unique_id=1685173287]
+script = ExtResource("3_vvut4")
+pause_menu_packed = ExtResource("3_kp23o")
+
 [node name="LevelLoader" type="Node" parent="." unique_id=1364778615 node_paths=PackedStringArray("level_container", "level_loading_screen")]
 script = ExtResource("5_4ybgr")
 level_container = NodePath("../LevelContainer")
@@ -44,12 +48,5 @@ directory = "res://scenes/game/levels"
 
 [node name="LevelLoadingScreen" parent="." unique_id=816430938 instance=ExtResource("10_3xj4h")]
 visible = false
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1974621767]
-layer = 100
-
-[node name="PauseMenuController" type="Node" parent="CanvasLayer" unique_id=1685173287]
-script = ExtResource("3_vvut4")
-pause_menu_packed = ExtResource("3_kp23o")
 
 [connection signal="level_loaded" from="LevelLoader" to="." method="_on_level_loader_level_loaded"]
