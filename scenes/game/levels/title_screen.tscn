@@ -6,7 +6,6 @@
 [ext_resource type="Shader" uid="uid://cqgvvug0oygwp" path="res://scenes/game/chromatic.gdshader" id="2_v1bup"]
 [ext_resource type="Shader" uid="uid://ckhhelq7qd6yh" path="res://scenes/game/tv_shutdown.gdshader" id="5_lehe1"]
 [ext_resource type="Texture2D" uid="uid://bo2hglqv36q7" path="res://assets/icons/satellite-big.png" id="6_nt0oy"]
-[ext_resource type="AudioStream" uid="uid://do8wx8cavhe0r" path="res://assets/audio/jabber.ogg" id="6_v3jq1"]
 [ext_resource type="Texture2D" uid="uid://cksg3mqc5aph5" path="res://assets/icons/earth-africa-europe-big.png" id="7_81f1r"]
 [ext_resource type="Texture2D" uid="uid://crgre1q81se3e" path="res://assets/icons/radar-dish-big.png" id="8_yptnb"]
 [ext_resource type="Texture2D" uid="uid://lp4btrl7162y" path="res://assets/icons/sound-waves-big.png" id="9_x1utt"]
@@ -16,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://cok20e5mhig2k" path="res://assets/icons/alien-stare-big.png" id="13_vlotl"]
 [ext_resource type="Texture2D" uid="uid://cnwjoe3fchkx6" path="res://assets/icons/swan-big.png" id="14_8gx0b"]
 [ext_resource type="Texture2D" uid="uid://c41y81bcvudk2" path="res://assets/icons/double-quaver-big.png" id="15_al5xl"]
+[ext_resource type="AudioStream" uid="uid://tr3rtihjshpx" path="res://assets/audio/jabber2.ogg" id="16_nt0oy"]
 
 [sub_resource type="Animation" id="Animation_idahx"]
 length = 0.001
@@ -175,7 +175,7 @@ tracks/0/path = NodePath("CenterContainer/Label:offset_transform_scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat64Array(4.5, 11),
+"times": PackedFloat64Array(5, 11.599999),
 "transitions": PackedFloat64Array(1, 1),
 "update": 0,
 "values": [Vector2(0.75, 0.75), Vector2(1, 1)]
@@ -187,7 +187,7 @@ tracks/1/path = NodePath("StaticColorRect:material:shader_parameter/radius")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat64Array(0, 11),
+"times": PackedFloat64Array(0, 11.599999),
 "transitions": PackedFloat64Array(1, 1),
 "update": 0,
 "values": [0.2999999932944, 0.5999999865888]
@@ -199,7 +199,7 @@ tracks/2/path = NodePath("TVOffColorRect:material:shader_parameter/progress")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat64Array(10.6, 11),
+"times": PackedFloat64Array(11.2, 11.599999),
 "transitions": PackedFloat64Array(1, 1),
 "update": 0,
 "values": [0.0, 0.999999977648]
@@ -211,7 +211,7 @@ tracks/3/path = NodePath("ChromaticColorRect:material:shader_parameter/r_displac
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat64Array(8.6, 10.6),
+"times": PackedFloat64Array(9.2, 11.2),
 "transitions": PackedFloat64Array(1, 1),
 "update": 0,
 "values": [Vector2(3, 0), Vector2(9, 0)]
@@ -223,7 +223,7 @@ tracks/4/path = NodePath("ChromaticColorRect:material:shader_parameter/g_displac
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat64Array(8.6, 10.6),
+"times": PackedFloat64Array(9.2, 11.2),
 "transitions": PackedFloat64Array(1, 1),
 "update": 0,
 "values": [Vector2(0, 3), Vector2(0, 9)]
@@ -235,7 +235,7 @@ tracks/5/path = NodePath("ChromaticColorRect:material:shader_parameter/b_displac
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat64Array(8.6, 10.6),
+"times": PackedFloat64Array(9.2, 11.2),
 "transitions": PackedFloat64Array(1, 1),
 "update": 0,
 "values": [Vector2(-3, 0), Vector2(-9, 0)]
@@ -247,7 +247,7 @@ tracks/6/path = NodePath("CenterContainer/Label:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat64Array(4.5, 5.3999996),
+"times": PackedFloat64Array(5, 5.8999996),
 "transitions": PackedFloat64Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -412,7 +412,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=370890398]
-stream = ExtResource("6_v3jq1")
+stream = ExtResource("16_nt0oy")
 volume_db = -20.0
 bus = &"SFX"
 
