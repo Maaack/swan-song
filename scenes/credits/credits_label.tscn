@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://jljc733whdom"]
 
-[ext_resource type="Script" path="res://addons/maaacks_game_template/base/nodes/labels/credits_label.gd" id="1_yhcaj"]
+[ext_resource type="Script" uid="uid://cc2wtqasev7le" path="res://addons/maaacks_game_template/base/nodes/labels/credits_label.gd" id="1_yhcaj"]
 
 [node name="CreditsLabel" type="RichTextLabel" unique_id=525943618]
 anchors_preset = 15
@@ -11,31 +11,70 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 5
 bbcode_enabled = true
-text = "[font_size=48]Collaborators[/font_size]
+text = "[font_size=48]A Game By[/font_size]
 
-[font_size=32]Godot Game Template[/font_size]
-[img=80]res:///assets/plugin_logo/logo.png[/img]  
-Author: [url=https://github.com/Maaack/Godot-Game-Template/graphs/contributors]Marek Belski and contributors[/url]  
-Source: [url=https://github.com/Maaack/Godot-Game-Template]github: Godot-Game-Template[/url]  
-License: [url=LICENSE.txt]MIT License[/url]  
+[font_size=32][url=https://maaack.itch.io/]Maaack[/url][/font_size]
+
+[font_size=48]Collaborators[/font_size]
+
+[font_size=32]Static and TV Off Shader[/font_size]
+[font_size=24][url=https://newman-93.itch.io/]Newman[/url][/font_size]
+
+[font_size=32]Vocal Audio Montage[/font_size]
+[font_size=24]Amythest[/font_size]
+
+[font_size=32]Music[/font_size]
+[font_size=24][url=https://orlandoo.itch.io/]Orlando Shamlou[/url][/font_size]
 
 [font_size=48]Sourced[/font_size]
-[font_size=24]Godot Engine Logo[/font_size]
-Author: Andrea Calabró  
-Source: [url=https://godotengine.org/press/]godotengine.org : press[/url]  
-License: [url=https://github.com/godotengine/godot/blob/master/LOGO_LICENSE.txt]CC BY 4.0 International[/url] 
 
-[font_size=24]Git Logo[/font_size]
-Author: [url=https://bsky.app/profile/jasonlong.me]Jason Long[/url]  
-Source: [url=https://git-scm.com/downloads/logos]git-scm.com : logos[/url]  
-License: [url=https://creativecommons.org/licenses/by/3.0/]CC BY 3.0[/url] 
+[font_size=32]Opening Graphics[/font_size]
+
+[font_size=24]Godot Wild Jam Logo & Theme[/font_size]
+Author: [url=https://coreyaroberts.com/]Dawk[/url]  
+Source: [url=https://godotwildjam.com/branding/]godotwildjam.com[/url]  
+License: Copyrighted
+
+[font_size=32]Fonts[/font_size]
+
+[font_size=24]Courier Prime[/font_size]
+Author: [url=https://www.1001fonts.com/users/adobe/]Adobe[/url]
+Source: [url=https://www.1001fonts.com/source-sans-pro-font.html]1001fonts.com : source-sans-pro-font[/url]  
+License: [url=https://openfontlicense.org/]OFL[/url]
+
+[font_size=32]Icons[/font_size]
+
+[font_size=24]Title Screen and Presentation Graphics[/font_size]
+Author: [url=https://game-icons.net/about.html#authors]Lorc, Delapouite, and contributors[/url]  
+Source: [url=https://game-icons.net/]Game-icons.net[/url]  
+License: [url=https://creativecommons.org/licenses/by/3.0/]Attribution 3.0 Unported (CC BY 3.0)[/url]  
+
+[font_size=32]Datasets[/font_size]
+
+[font_size=24]Homer Simpson[/font_size]
+Author: [url=https://jcponce.github.io/]Juan Carlos Ponce Campuzano[/url]
+Source: [url=https://editor.p5js.org/jcponce/full/x-Jt7k2fc]p5js.org[/url]
+License: [url=https://creativecommons.org/licenses/by-nc/4.0/]Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)[/url]
 
 [font_size=48]Tools[/font_size]
+
 [font_size=24]Godot[/font_size]
 [img=80]res:///assets/godot_engine_logo/logo_vertical_color_dark.png[/img]  
 Author: [url=https://godotengine.org/contact]Juan Linietsky, Ariel Manzur, and contributors[/url]  
 Source: [url=https://godotengine.org/]godotengine.org[/url]  
 License: [url=https://github.com/godotengine/godot/blob/master/LICENSE.txt]MIT License[/url]  
+
+[font_size=24]Dialogue Manager[/font_size]
+[img=80]res:///addons/dialogue_manager/assets/logo.svg[/img]
+Author: [url=https://nathanhoad.itch.io/]Nathan Hoad[/url]  
+Source: [url=https://nathanhoad.itch.io/godot-dialogue-manager]itch.io: godot-dialogue-manager[/url]  
+License: [url=https://github.com/nathanhoad/godot_dialogue_manager/blob/main/LICENSE]MIT License[/url] 
+
+[font_size=24]Godot Game Template[/font_size]
+[img=80]res:///assets/plugin_logo/logo.png[/img]  
+Author: [url=https://github.com/Maaack/Godot-Game-Template/graphs/contributors]Marek Belski and contributors[/url]  
+Source: [url=https://github.com/Maaack/Godot-Game-Template]github: Godot-Game-Template[/url]  
+License: [url=LICENSE.txt]MIT License[/url]  
 
 [font_size=24]Visual Studio Code[/font_size]
 Author: [url=https://opensource.microsoft.com/]Microsoft[/url]  
@@ -47,7 +86,20 @@ License: [url=https://github.com/microsoft/vscode/blob/main/LICENSE.txt]MIT Lice
 Author: [url=https://github.com/torvalds]Linus Torvalds[/url]  
 Source: [url=https://git-scm.com/downloads]git-scm.com[/url]  
 License: [url=https://opensource.org/licenses/GPL-2.0]GNU General Public License version 2[/url]
-"
+
+[font_size=48]References[/font_size]
+
+[url=https://betterexplained.com/articles/an-interactive-guide-to-the-fourier-transform/]betterexplained.com: An Interactive Guide To The Fourier Transform[/url]  
+
+[url=https://betterexplained.com/examples/fourier/]betterexplained.com: Fourier[/url]  
+
+[url=https://gist.github.com/kazad/8bb682da198db597558c]github.com: BetterExplained Fourier Example[/url]
+
+[url=https://www.jezzamon.com/fourier/]jezzamon.com: An Interactive Introduction to Fourier Transforms[/url]  
+
+[url=https://bestiariotopologico.blogspot.com/2020/05/la-orbita-de-homero-simpson-una.html]blogspot.com: La órbita de Homero Simpson[/url]
+
+[url=https://github.com/tavurth/godot-fft]github.com: godot-fft[/url]"
 fit_content = true
 scroll_active = false
 horizontal_alignment = 1
