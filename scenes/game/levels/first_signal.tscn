@@ -93,6 +93,7 @@ size_flags_horizontal = 3
 unique_name_in_owner = true
 script = ExtResource("4_tlr6i")
 show_parts = false
+show_ticks = false
 combined_color = Color(0.99999994, 0.11890424, 0.29773155, 1)
 combined_line_width = 3.0
 

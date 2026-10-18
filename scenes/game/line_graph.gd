@@ -17,11 +17,13 @@ extends Node2D
 @export var width : float = 800
 @export var show_parts : bool = true
 @export var show_combined : bool = true
+@export var show_ticks : bool = true
 @export var combined_color : Color = Color.DARK_GRAY
 @export var combined_line_width : float = 1.0
 @export var first_part_color : Color = Color(Color.LIGHT_GREEN, 0.25)
 @export var other_part_color : Color = Color.DARK_GREEN
 @export var part_line_width : float = 1.0
+@export var ticks_color : Color = Color(Color.YELLOW, 0.25)
 
 var cycle_series_size : int = 0
 var y_values : Array[float]
@@ -35,6 +37,9 @@ func cycle_func(x:float) -> float:
 	return FourierTransform.total_value(x, cycle_series).re
 
 func _draw():
+	draw_axis()
+	if show_ticks:
+		draw_ticks()
 	if show_parts:
 		var color := first_part_color
 		for i in range(0, cycle_series_size):
@@ -43,6 +48,16 @@ func _draw():
 			timegraph_path(func(x): return FourierTransform.total_value(x, [cycle_series[i]]).re, color, part_line_width)
 	if show_combined:
 		timegraph_path(cycle_func, combined_color, combined_line_width)
+
+func draw_axis() -> void:
+	draw_line(Vector2(-width/2.0, height), Vector2(-width/2.0, -height), Color.WHITE)
+	draw_line(Vector2(-width/2.0, 0), Vector2(width/2.0, 0), Color.WHITE)
+
+func draw_ticks() -> void:
+	for i in range(0, cycle_series_size):
+		var x = (i * width / cycle_series_size) - (width / 2.0)
+		draw_line(Vector2(x, height), Vector2(x, -height), ticks_color)
+
 
 func timegraph_path(cycle_callable:Callable, color:Color = Color.GRAY, line_width:float = 1.0):
 	var px = 0
@@ -67,5 +82,5 @@ func timegraph_path(cycle_callable:Callable, color:Color = Color.GRAY, line_widt
 
 func timegraph_interval(t, color):
 	var x = (t * 180 / PI) * width / 360
-	var min_y = height / 2
-	var max_y = -height / 2
+	var min_y = height
+	var max_y = -height
