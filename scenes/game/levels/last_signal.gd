@@ -42,11 +42,11 @@ func _play_next_dialogue() -> void:
 	match(current_dialogue_name):
 		"part_1":
 			base_processing_speed *= 5.0
-			base_drawing_speed *= 5.0
+			base_drawing_speed *= 4.0
 			data_points_h_slider.max_value *= 10
 		"part_2":
 			base_processing_speed *= 5.0
-			base_drawing_speed *= 10.0
+			base_drawing_speed *= 8.0
 			data_points_h_slider.max_value *= 15
 
 func _on_dialogue_ended(_dialogue_resource):
@@ -88,7 +88,7 @@ func _on_data_points_h_slider_value_changed(value):
 	data_points_text.text = "%d" % value
 
 func _on_draw_speed_h_slider_value_changed(value):
-	fourier_cycles.time_mod = draw_speed_h_slider.value * base_drawing_speed
+	fourier_cycles.time_mod = draw_speed_h_slider.value * base_drawing_speed / float(processing_data_points)
 
 func _on_fourier_cycles_drawing_completed():
 	match(current_dialogue_name):
