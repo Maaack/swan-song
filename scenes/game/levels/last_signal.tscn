@@ -6,6 +6,54 @@
 [ext_resource type="Script" uid="uid://2vp2njihlfek" path="res://resources/dataset/homer_drawing.gd" id="2_we28g"]
 [ext_resource type="Script" uid="uid://dmhlhegovgg3q" path="res://scenes/game/fourier_cycles.gd" id="3_ine82"]
 [ext_resource type="Script" uid="uid://c7o8uqqpfkbxh" path="res://scenes/game/drawing.gd" id="4_8e02v"]
+[ext_resource type="Shader" uid="uid://ckhhelq7qd6yh" path="res://scenes/game/tv_shutdown.gdshader" id="7_8e02v"]
+
+[sub_resource type="Animation" id="Animation_vmph3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat64Array(0),
+"transitions": PackedFloat64Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_k27l6"]
+resource_name = "ending"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat64Array(0, 0.5),
+"transitions": PackedFloat64Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j7kv0"]
+_data = {
+&"RESET": SubResource("Animation_vmph3"),
+&"ending": SubResource("Animation_k27l6")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ine82"]
+shader = ExtResource("7_8e02v")
+shader_parameter/speed = 1.0
+shader_parameter/progress = 0.0
+shader_parameter/smoothness = 0.1
+shader_parameter/flash_radius = 0.15
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/off_color = Color(0, 0, 0, 1)
+shader_parameter/monitor_filter = false
 
 [node name="LastSignal" type="Control" unique_id=472592865]
 layout_mode = 3
@@ -17,6 +65,10 @@ grow_vertical = 2
 script = ExtResource("1_we28g")
 dialogue_resource = ExtResource("2_ine82")
 base_processing_speed = 5.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=750830758]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_j7kv0")
 
 [node name="HomerSimpsonTransform" type="Node" parent="." unique_id=1806787966]
 unique_name_in_owner = true
@@ -133,6 +185,18 @@ max_value = 2.0
 step = 0.1
 value = 0.5
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=605453823]
+material = SubResource("ShaderMaterial_ine82")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 [connection signal="drawing_completed" from="MarginContainer/VBoxContainer/CenterContainer/Control/FourierCycles" to="." method="_on_fourier_cycles_drawing_completed"]
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/HBoxContainer/DataPointsHSlider" to="." method="_on_data_points_h_slider_value_changed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/ProcessButton" to="." method="_on_process_button_pressed"]

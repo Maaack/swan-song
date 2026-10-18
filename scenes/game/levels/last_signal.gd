@@ -21,6 +21,7 @@ var current_dialogue_balloon : Node
 @onready var progress_bar = %ProgressBar
 @onready var data_points_h_slider = %DataPointsHSlider
 @onready var draw_speed_h_slider = %DrawSpeedHSlider
+@onready var animation_player = %AnimationPlayer
 
 var is_signal_processing : bool = false
 var processing_progress : float = 0.0
@@ -44,7 +45,7 @@ func _play_next_dialogue() -> void:
 
 func _on_dialogue_ended(_dialogue_resource):
 	if current_dialogue_name == "ending":
-		level_won.emit()
+		animation_player.play(&"ending")
 
 func _ready():
 	var fourier_x : Array[SpectrumData] = homer_simpson_transform.get_fourier_x()
@@ -91,3 +92,6 @@ func _on_fourier_cycles_drawing_completed():
 		"part_2":
 			if data_points_h_slider.value >= 250:
 				_play_next_dialogue()
+
+func _on_animation_player_animation_finished(anim_name):
+	level_won.emit()
