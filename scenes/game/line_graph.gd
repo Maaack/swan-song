@@ -17,6 +17,11 @@ extends Node2D
 @export var width : float = 800
 @export var show_parts : bool = true
 @export var show_combined : bool = true
+@export var combined_color : Color = Color.DARK_GRAY
+@export var combined_line_width : float = 1.0
+@export var first_part_color : Color = Color(Color.LIGHT_GREEN, 0.25)
+@export var other_part_color : Color = Color.DARK_GREEN
+@export var part_line_width : float = 1.0
 
 var cycle_series_size : int = 0
 var y_values : Array[float]
@@ -31,13 +36,13 @@ func cycle_func(x:float) -> float:
 
 func _draw():
 	if show_parts:
-		var color := Color(Color.LIGHT_GREEN, 0.5)
+		var color := first_part_color
 		for i in range(0, cycle_series_size):
 			if i != 0:
-				color = Color.DARK_GREEN
-			timegraph_path(func(x): return FourierTransform.total_value(x, [cycle_series[i]]).re, color)
+				color = other_part_color
+			timegraph_path(func(x): return FourierTransform.total_value(x, [cycle_series[i]]).re, color, part_line_width)
 	if show_combined:
-		timegraph_path(cycle_func, Color.DARK_GRAY)
+		timegraph_path(cycle_func, combined_color, combined_line_width)
 
 func timegraph_path(cycle_callable:Callable, color:Color = Color.GRAY, line_width:float = 1.0):
 	var px = 0

@@ -92,6 +92,8 @@ size_flags_horizontal = 3
 unique_name_in_owner = true
 script = ExtResource("4_tlr6i")
 show_parts = false
+combined_color = Color(0.99999994, 0.11890424, 0.29773155, 1)
+combined_line_width = 3.0
 
 [node name="HSeparator2" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=1937577110]
 layout_mode = 2
@@ -123,6 +125,8 @@ size_flags_horizontal = 3
 [node name="TimeGraph" type="Node2D" parent="MarginContainer/VBoxContainer/ProcessedSignalContainer/CenterContainer2/TimeGraphControl" unique_id=261069256]
 unique_name_in_owner = true
 script = ExtResource("4_tlr6i")
+combined_color = Color(0.22539166, 0.45009696, 0.9980486, 1)
+combined_line_width = 3.0
 
 [node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=613284771]
 layout_mode = 2
