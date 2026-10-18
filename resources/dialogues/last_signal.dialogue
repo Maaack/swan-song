@@ -3,6 +3,11 @@ Manager: So here is the new tool. Something I put together.
 Manager: It's limited on power, but if we get promising results, I can dedicate more compute from the server farm.
 => END
 
+~ incorrect
+Manager: Hm. That doesn't look like anything.
+Manager: Try a different key for the radius.
+=> END
+
 ~ part_1
 Manager: Yes, that looks like it could be something!
 Manager: I've boosted the processing power by 10x! Let's see what we can get with that.
@@ -32,8 +37,8 @@ Manager: Is this a joke?
 	Manager: SHUT UP!
 - (Say nothing)
 	Manager: Oh no. No no no.
-Manager: Nobody is going to believe this.
-Manager: Every space agency - We've been duped! We're all going to look like fools!
+Manager: Nobody is going to believe this!
+Manager: Every space agency - We're all going to look like fools!
 Manager: I have to warn the others...
 With that, the manager stormed out of the room.
 	The whole project soon came to an immediate halt.

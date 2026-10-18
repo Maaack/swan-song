@@ -13,6 +13,7 @@ var current_dialogue_balloon : Node
 
 @export var dialogue_resource : DialogueResource
 @export var base_processing_speed:float = 1.0
+@export var base_drawing_speed:float = 1.0
 
 @onready var homer_simpson_transform = %HomerSimpsonTransform
 @onready var fourier_cycles = %FourierCycles
@@ -26,6 +27,8 @@ var current_dialogue_balloon : Node
 
 var is_signal_processing : bool = false
 var processing_progress : float = 0.0
+var processing_data_points : int = 0
+var processing_key : int = 0
 
 func _play_next_dialogue() -> void:
 	current_dialogue_iter += 1
@@ -38,10 +41,12 @@ func _play_next_dialogue() -> void:
 	current_dialogue_balloon = DialogueManager.show_dialogue_balloon(dialogue_resource, current_dialogue_name)
 	match(current_dialogue_name):
 		"part_1":
-			base_processing_speed *= 8.0
+			base_processing_speed *= 5.0
+			base_drawing_speed *= 5.0
 			data_points_h_slider.max_value *= 10
 		"part_2":
-			base_processing_speed *= 10.0
+			base_processing_speed *= 5.0
+			base_drawing_speed *= 10.0
 			data_points_h_slider.max_value *= 15
 
 func _on_dialogue_ended(_dialogue_resource):
@@ -59,18 +64,20 @@ func _on_process_button_pressed():
 	is_signal_processing = true
 	process_button.disabled = is_signal_processing
 	data_points_h_slider.editable = not is_signal_processing
+	processing_data_points = data_points_h_slider.value
+	processing_key = option_button.selected
 
-func _process_data_points(value:int) -> void:
-	fourier_cycles.radius_mode = option_button.selected
-	fourier_cycles.terms = value
+func _process_data_points() -> void:
+	fourier_cycles.radius_mode = processing_key
+	fourier_cycles.time_mod = draw_speed_h_slider.value * base_drawing_speed / float(processing_data_points)
+	fourier_cycles.terms = processing_data_points
 
 func _process(delta):
 	if not is_signal_processing: return
-	var signal_parts : int = data_points_h_slider.value
-	processing_progress += delta * base_processing_speed / float(signal_parts)
+	processing_progress += delta * base_processing_speed / float(processing_data_points)
 	progress_bar.value = processing_progress
 	if processing_progress >= 1.0:
-		_process_data_points(signal_parts)
+		_process_data_points()
 		is_signal_processing = false
 		process_button.disabled = is_signal_processing
 		data_points_h_slider.editable = not is_signal_processing
@@ -80,18 +87,23 @@ func _on_data_points_h_slider_value_changed(value):
 	data_points_text.text = "%d" % value
 
 func _on_draw_speed_h_slider_value_changed(value):
-	fourier_cycles.time_mod = draw_speed_h_slider.value
+	fourier_cycles.time_mod = draw_speed_h_slider.value * base_drawing_speed
 
 func _on_fourier_cycles_drawing_completed():
 	match(current_dialogue_name):
 		"start":
-			if data_points_h_slider.value >= 4 and option_button.selected == 3:
-				_play_next_dialogue()
+			if processing_data_points >= 4:
+				if processing_key == 3:
+					_play_next_dialogue()
+				else:
+					if is_instance_valid(current_dialogue_balloon):
+						current_dialogue_balloon.queue_free()
+					current_dialogue_balloon = DialogueManager.show_dialogue_balloon(dialogue_resource, "incorrect")
 		"part_1":
-			if data_points_h_slider.value >= 40 and option_button.selected == 3:
+			if processing_data_points >= 40 and processing_key == 3:
 				_play_next_dialogue()
 		"part_2":
-			if data_points_h_slider.value >= 250 and option_button.selected == 3:
+			if processing_data_points >= 250 and processing_key == 3:
 				_play_next_dialogue()
 
 func _on_animation_player_animation_finished(anim_name):

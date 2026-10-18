@@ -64,7 +64,7 @@ func _draw():
 			3:
 				radius = data[i].amp
 			4:
-				radius = data[i].phase
+				radius = data[i].phase * 10
 		var phase = data[i].phase
 		x += radius * cos(freq * time + phase + rotation)
 		y += radius * sin(freq * time + phase + rotation)
