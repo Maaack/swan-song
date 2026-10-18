@@ -81,6 +81,11 @@ size_flags_vertical = 3
 custom_minimum_size = Vector2(240, 0)
 layout_mode = 2
 
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/OriginalSignalContainer/CenterContainer" unique_id=2032425712]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Original Signal"
+
 [node name="CenterContainer2" type="CenterContainer" parent="MarginContainer/VBoxContainer/OriginalSignalContainer" unique_id=757367572]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -92,6 +97,7 @@ size_flags_horizontal = 3
 [node name="OriginalTimeGraph" type="Node2D" parent="MarginContainer/VBoxContainer/OriginalSignalContainer/CenterContainer2/TimeGraphControl" unique_id=1730672432]
 unique_name_in_owner = true
 script = ExtResource("4_tlr6i")
+width = 960.0
 show_parts = false
 show_ticks = false
 combined_color = Color(0.99999994, 0.11890424, 0.29773155, 1)
@@ -115,6 +121,7 @@ size_flags_horizontal = 3
 [node name="CycleGraph" type="Node2D" parent="MarginContainer/VBoxContainer/ProcessedSignalContainer/CenterContainer/CycleGraphControl" unique_id=951414982]
 unique_name_in_owner = true
 script = ExtResource("3_hclse")
+combined_color = Color(0.22352941, 0.4509804, 1, 1)
 
 [node name="CenterContainer2" type="CenterContainer" parent="MarginContainer/VBoxContainer/ProcessedSignalContainer" unique_id=463999331]
 layout_mode = 2
@@ -127,7 +134,8 @@ size_flags_horizontal = 3
 [node name="TimeGraph" type="Node2D" parent="MarginContainer/VBoxContainer/ProcessedSignalContainer/CenterContainer2/TimeGraphControl" unique_id=261069256]
 unique_name_in_owner = true
 script = ExtResource("4_tlr6i")
-combined_color = Color(0.22539166, 0.45009696, 0.9980486, 1)
+width = 960.0
+combined_color = Color(0.22352941, 0.4509804, 1, 1)
 combined_line_width = 3.0
 
 [node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=613284771]
