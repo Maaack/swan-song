@@ -178,7 +178,7 @@ tracks/1/keys = {
 "times": PackedFloat64Array(0, 11.599999),
 "transitions": PackedFloat64Array(1, 1),
 "update": 0,
-"values": [0.2999999932944, 0.5999999865888]
+"values": [0.0999999977648, 0.7999999821184]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -307,7 +307,7 @@ shader_parameter/stretch = Vector2(0.75, 1.5)
 shader_parameter/radius = 0.0
 shader_parameter/brightness = 0.6999999843536
 shader_parameter/density = 0.0999999977648
-shader_parameter/opacity = 0.3499999921768
+shader_parameter/opacity = 0.499999988824
 shader_parameter/static_color = Color(1, 1, 1, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_idahx"]
