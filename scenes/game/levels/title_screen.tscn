@@ -151,18 +151,6 @@ tracks/10/keys = {
 "update": 0,
 "values": [Vector2(0.5, 0.5)]
 }
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("AudioStreamPlayer:volume_db")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat64Array(0),
-"transitions": PackedFloat64Array(1),
-"update": 0,
-"values": [-20.0]
-}
 
 [sub_resource type="Animation" id="Animation_v1bup"]
 resource_name = "opening"
@@ -300,18 +288,6 @@ tracks/10/keys = {
 "update": 0,
 "values": [Vector2(0.5, 0.5), Vector2(1, 1)]
 }
-tracks/11/type = "value"
-tracks/11/imported = false
-tracks/11/enabled = true
-tracks/11/path = NodePath("AudioStreamPlayer:volume_db")
-tracks/11/interp = 1
-tracks/11/loop_wrap = true
-tracks/11/keys = {
-"times": PackedFloat64Array(0, 1.03),
-"transitions": PackedFloat64Array(1, 1),
-"update": 0,
-"values": [-30.0, 0.0]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lehe1"]
 _data = {
@@ -413,7 +389,6 @@ grow_vertical = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=370890398]
 stream = ExtResource("16_nt0oy")
-volume_db = -20.0
 bus = &"SFX"
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
